@@ -18,6 +18,12 @@ namespace TestMvcFramework
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                    "Blog",                                                                                                             // Route name
+                    "{controller}/{action}/{id}/{type}",                                                                                // URL with parameters
+                    new { controller = "Home", action = "RouteTest", id = UrlParameter.Optional, type = UrlParameter.Optional }         // Parameter defaults
+                );
         }
     }
 }
