@@ -1,0 +1,18 @@
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.deps.json
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csprojAssemblyReference.cache
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfoInputs.cache
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfo.cs
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\Tim\Documents\Visual Studio 2017\Projects\FirstMvcCoreStarter\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.RentalsDemo1\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb

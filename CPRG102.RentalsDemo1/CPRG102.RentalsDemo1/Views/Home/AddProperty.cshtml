@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddProperty</title>
+</head>
+<body>
+    <h2>Rental Property</h2>
+    <form method="post" action="/Home/Process">
+        <table>
+            <tr>
+                <td>Address: </td>
+                <td>
+                    <input type="text" name="Address" />
+                </td>
+            </tr>
+            <tr>
+                <td>City: </td>
+                <td>
+                    <input type="text" name="City" />
+                </td>
+            </tr>
+            <tr>
+                <td>Province: </td>
+                <td>
+                    <input type="text" name="Province" />
+                </td>
+            </tr>
+            <tr>
+                <td>Postal Code: </td>
+                <td>
+                    <input type="text" name="PostalCode" />
+                </td>
+            </tr>
+            <tr>
+                <td>Rental Amount:</td>
+                <td>
+                    <input type="text" name="Rent" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit"/>
+                </td>
+            </tr>
+        </table>        
+    </form>
+
+</body>
+</html>
