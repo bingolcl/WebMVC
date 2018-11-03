@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CPRG102.Rentals.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CPRG102.Rentals.App
 {
@@ -30,9 +32,12 @@ namespace CPRG102.Rentals.App
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            var connection = @"server=localhost;database=RentalProperties;user id=sa;password=SQLPassword;";
+            services.AddDbContext<RentalsContext>
+                (options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

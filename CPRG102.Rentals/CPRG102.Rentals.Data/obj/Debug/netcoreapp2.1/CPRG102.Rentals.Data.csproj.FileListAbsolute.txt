@@ -1,0 +1,14 @@
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.runtimeconfig.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.runtimeconfig.dev.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.csproj.CopyComplete
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Data\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Data.pdb

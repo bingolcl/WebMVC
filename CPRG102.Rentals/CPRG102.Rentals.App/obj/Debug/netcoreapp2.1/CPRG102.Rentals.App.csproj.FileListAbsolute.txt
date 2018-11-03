@@ -5,6 +5,12 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.App.pdb
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.App.Views.dll
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.App.Views.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Business.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Business.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Data.pdb
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.csprojAssemblyReference.cache
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.csproj.CoreCompileInputs.cache
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.RazorAssemblyInfo.cache
@@ -18,6 +24,9 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Create.g.cshtml.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Details.g.cshtml.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Index.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
@@ -27,11 +36,6 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.RazorTargetAssemblyInfo.cache
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.RazorTargetAssemblyInfo.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.Views.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.csproj.CopyComplete
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.dll
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.pdb
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\CPRG102.Rentals.App.csproj.CopyComplete
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Index.g.cshtml.cs
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Details.g.cshtml.cs
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Create.g.cshtml.cs
