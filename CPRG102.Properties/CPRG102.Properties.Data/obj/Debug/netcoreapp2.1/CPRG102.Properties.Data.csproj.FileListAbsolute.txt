@@ -1,0 +1,14 @@
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.runtimeconfig.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.runtimeconfig.dev.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.csproj.CopyComplete
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Data\obj\Debug\netcoreapp2.1\CPRG102.Properties.Data.pdb
