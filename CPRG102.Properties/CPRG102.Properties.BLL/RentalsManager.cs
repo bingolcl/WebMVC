@@ -1,5 +1,6 @@
 ﻿using CPRG102.Properties.Data;
 using CPRG102.Properties.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,9 @@ namespace CPRG102.Properties.BLL
         public static List<RentalProperty> GetAll()
         {
             var context = new RentalsContext();
-            var rentals = context.RentalProperties.ToList();
+            var rentals = context.RentalProperties.
+                            Include(r => r.PropertyType).                
+                            ToList();
             return rentals;
         }
 

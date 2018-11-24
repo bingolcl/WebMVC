@@ -17,6 +17,24 @@ namespace CPRG102.Properties.App.Controllers
             var model = RentalsManager.GetAll();
             return View(model);
         }
+        public IActionResult Search()
+        {
+            //get all types
+            var types = PropertyTypeManager.GetAll();
+
+            //use linq to create a collection of select list items
+            var styles = types.Select(pt => new SelectListItem
+            {
+                Value = pt.Id.ToString(),
+                Text = pt.Style
+            });
+
+            return View(styles);
+        }
+        public IActionResult GetFilteredProperties(int id)
+        {
+            return ViewComponent("FilterProperties",id);
+        }
 
         public IActionResult Create()
         {

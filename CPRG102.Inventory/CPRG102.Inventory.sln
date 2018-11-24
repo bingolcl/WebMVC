@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG102.Inventory.App", "CPRG102.Inventory.App\CPRG102.Inventory.App.csproj", "{C518CFAB-4309-4384-9C0F-2CC5A77600C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG102.Inventory.Repository", "CPRG102.Inventory.Repository\CPRG102.Inventory.Repository.csproj", "{67818CFC-0E09-4AF8-92D3-68727CE912DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C518CFAB-4309-4384-9C0F-2CC5A77600C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C518CFAB-4309-4384-9C0F-2CC5A77600C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C518CFAB-4309-4384-9C0F-2CC5A77600C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C518CFAB-4309-4384-9C0F-2CC5A77600C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67818CFC-0E09-4AF8-92D3-68727CE912DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67818CFC-0E09-4AF8-92D3-68727CE912DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67818CFC-0E09-4AF8-92D3-68727CE912DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67818CFC-0E09-4AF8-92D3-68727CE912DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26D06141-DFAE-43BB-BDFE-17A223F5D7E1}
+	EndGlobalSection
+EndGlobal

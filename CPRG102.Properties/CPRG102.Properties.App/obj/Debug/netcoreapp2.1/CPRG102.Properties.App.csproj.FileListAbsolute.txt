@@ -43,3 +43,5 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Ap
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.App\obj\Debug\netcoreapp2.1\Razor\Views\PropertyType\Index.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Create.g.cshtml.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.App\obj\Debug\netcoreapp2.1\Razor\Views\Owner\Edit.g.cshtml.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.App\obj\Debug\netcoreapp2.1\Razor\Views\Rentals\Search.g.cshtml.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FilterProperties\Default.g.cshtml.cs

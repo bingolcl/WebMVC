@@ -23,9 +23,9 @@ namespace CPRG102.Properties.Domain
         public int? RenterId { get; set; }
 
         //navigation properties
-        public PropertyType PropertyType { get; set; }
-        public Owner Owner { get; set; }
-        public Renter Renter { get; set; }
+        public virtual PropertyType PropertyType { get; set; }
+        public virtual Owner Owner { get; set; }
+        public virtual Renter Renter { get; set; }
     }
 
 }

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem>
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<div style="padding-top:50px;">
+    <h2>Rentals</h2>
+    @*select drop down for property types*@
+    <select id="uxPropertyType" asp-items="@Model">
+        <option value="0">All Avilable</option>
+    </select>
+</div>
+
+<div id="uxFilteredTypes">
+    @*this is the area wehre we will display available properties for the selected type*@
+    @await Component.InvokeAsync("FilterProperties",0)
+</div>
+
+@section Scripts {
+<script>
+    //user jquery's ajax method to call a view component to display
+    $(document).ready(function () {
+        //alert('test');
+        $("#uxPropertyType").change(function () {
+            var id = $("#uxPropertyType").val();
+            //alert(id);
+            $.ajax({
+                method: 'GET',
+                url: '/Rentals/GetFilteredProperties',
+                data: { id: id }
+            }).done(function (result, statusText, xhdr) {
+                $("#uxFilteredTypes").html(result);
+                }).fail(function (xhdr, statusText, errorText) {
+                    $("#uxFilteredTypes").html(JSON.stringify(xhdr));
+                })
+            //$("#uxFilteredTypes").load('/Rentals/GetFilteredProperties/'+id);               
+      });     
+
+    });
+</script>
+}
