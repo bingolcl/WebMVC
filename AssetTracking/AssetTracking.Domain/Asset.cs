@@ -17,7 +17,6 @@ namespace AssetTracking.Domain
         public int AssetTypeId { get; set; }
         public int ManufacturerId { get; set; }
         public int ModelId { get; set; }
-        [Required]
         public string AssignedTo { get; set; }
 
         //navigation properties

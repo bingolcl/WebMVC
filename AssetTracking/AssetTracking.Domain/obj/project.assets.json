@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj",
       "projectName": "AssetTracking.Domain",
-      "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj",
+      "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj",
       "packagesPath": "C:\\Users\\cecilia\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\obj\\",
+      "outputPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

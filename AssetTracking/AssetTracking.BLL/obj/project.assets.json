@@ -3602,11 +3602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.BLL\\AssetTracking.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.BLL\\AssetTracking.BLL.csproj",
       "projectName": "AssetTracking.BLL",
-      "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.BLL\\AssetTracking.BLL.csproj",
+      "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.BLL\\AssetTracking.BLL.csproj",
       "packagesPath": "C:\\Users\\cecilia\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.BLL\\obj\\",
+      "outputPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3625,11 +3625,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj": {
-              "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj"
+            "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj": {
+              "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj"
             },
-            "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj": {
-              "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj"
+            "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj": {
+              "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj"
             }
           }
         }

@@ -3582,11 +3582,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj",
+      "projectUniqueName": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj",
       "projectName": "AssetTracking.Data",
-      "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj",
+      "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Data\\AssetTracking.Data.csproj",
       "packagesPath": "C:\\Users\\cecilia\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Data\\obj\\",
+      "outputPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3605,8 +3605,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj": {
-              "projectPath": "c:\\users\\cecilia\\source\\repos\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj"
+            "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj": {
+              "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\AssetTracking\\AssetTracking.Domain\\AssetTracking.Domain.csproj"
             }
           }
         }

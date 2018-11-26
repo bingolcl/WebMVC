@@ -16,5 +16,6 @@ namespace AssetTracking.Domain
         public int ManufacturerId { get; set; }
         //navigation property
         public ICollection<Asset> Assets { get; set; }
+        public Manufacturer Manufacturer { get; set; }
     }
 }
