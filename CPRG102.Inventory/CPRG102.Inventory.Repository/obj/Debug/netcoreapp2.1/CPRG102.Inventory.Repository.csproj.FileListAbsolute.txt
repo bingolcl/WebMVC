@@ -1,0 +1,9 @@
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Inventory\CPRG102.Inventory.Repository\obj\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.pdb

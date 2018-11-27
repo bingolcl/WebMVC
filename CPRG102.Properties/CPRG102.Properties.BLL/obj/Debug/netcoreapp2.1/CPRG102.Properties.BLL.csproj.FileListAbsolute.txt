@@ -1,0 +1,14 @@
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.BLL.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.BLL.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.csproj.CopyComplete
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\bin\Debug\netcoreapp2.1\CPRG102.Properties.BLL.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.BLL\obj\Debug\netcoreapp2.1\CPRG102.Properties.BLL.pdb

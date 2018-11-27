@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "CPRG102.Properties.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "CPRG102.Properties.Data": "1.0.0",
+          "CPRG102.Properties.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CPRG102.Properties.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CPRG102.Properties.BLL.dll": {}
+        }
+      },
+      "CPRG102.Properties.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "CPRG102.Properties.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CPRG102.Properties.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CPRG102.Properties.Data.dll": {}
+        }
+      },
+      "CPRG102.Properties.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/CPRG102.Properties.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CPRG102.Properties.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CPRG102.Properties.BLL/1.0.0": {
+      "type": "project",
+      "path": "../CPRG102.Properties.BLL/CPRG102.Properties.BLL.csproj",
+      "msbuildProject": "../CPRG102.Properties.BLL/CPRG102.Properties.BLL.csproj"
+    },
+    "CPRG102.Properties.Data/1.0.0": {
+      "type": "project",
+      "path": "../CPRG102.Properties.Data/CPRG102.Properties.Data.csproj",
+      "msbuildProject": "../CPRG102.Properties.Data/CPRG102.Properties.Data.csproj"
+    },
+    "CPRG102.Properties.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CPRG102.Properties.Domain/CPRG102.Properties.Domain.csproj",
+      "msbuildProject": "../CPRG102.Properties.Domain/CPRG102.Properties.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.1": [
+      "CPRG102.Properties.BLL >= 1.0.0",
+      "CPRG102.Properties.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\cecilia\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.App\\CPRG102.Properties.App.csproj",
+      "projectName": "CPRG102.Properties.App",
+      "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.App\\CPRG102.Properties.App.csproj",
+      "packagesPath": "C:\\Users\\cecilia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.App\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\cecilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "projectReferences": {
+            "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.BLL\\CPRG102.Properties.BLL.csproj": {
+              "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.BLL\\CPRG102.Properties.BLL.csproj"
+            },
+            "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.Domain\\CPRG102.Properties.Domain.csproj": {
+              "projectPath": "C:\\Users\\cecilia\\source\\repos\\WebMVC\\CPRG102.Properties\\CPRG102.Properties.Domain\\CPRG102.Properties.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.1": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

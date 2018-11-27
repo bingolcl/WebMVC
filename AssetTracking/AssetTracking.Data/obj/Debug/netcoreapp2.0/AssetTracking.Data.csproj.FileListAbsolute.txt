@@ -1,0 +1,6 @@
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.deps.json
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.dll
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csprojAssemblyReference.cache
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csproj.CoreCompileInputs.cache
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfoInputs.cache
+c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfo.cs
