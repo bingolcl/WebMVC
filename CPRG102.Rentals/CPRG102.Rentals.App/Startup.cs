@@ -35,7 +35,7 @@ namespace CPRG102.Rentals.App
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var connection = @"server=localhost;database=RentalProperties;user id=sa;password=SQLPassword;";
+            var connection = @"server=localhost;database=RentalProperties;Trusted_Connection=True;";
             services.AddDbContext<RentalsContext>
                 (options => options.UseSqlServer(connection));
         }

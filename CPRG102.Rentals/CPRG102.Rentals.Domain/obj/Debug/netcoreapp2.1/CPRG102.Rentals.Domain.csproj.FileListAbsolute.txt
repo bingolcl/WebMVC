@@ -15,3 +15,12 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\o
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfo.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.deps.json
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\bin\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfo.cs
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.dll
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.pdb
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csprojAssemblyReference.cache
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lisaz\Documents\GitHub\WebMVC\CPRG102.Rentals\CPRG102.Rentals.Domain\obj\Debug\netcoreapp2.1\CPRG102.Rentals.Domain.AssemblyInfoInputs.cache
