@@ -31,9 +31,9 @@
                 data: { id: id }
             }).done(function (result, statusText, xhdr) {
                 $("#uxFilteredTypes").html(result);
-                }).fail(function (xhdr, statusText, errorText) {
-                    $("#uxFilteredTypes").html(JSON.stringify(xhdr));
-                })
+            }).fail(function (xhdr, statusText, errorText) {
+                $("#uxFilteredTypes").html(JSON.stringify(xhdr));
+            })
             //$("#uxFilteredTypes").load('/Rentals/GetFilteredProperties/'+id);               
       });     
 

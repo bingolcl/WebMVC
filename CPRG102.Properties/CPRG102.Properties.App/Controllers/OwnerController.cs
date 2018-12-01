@@ -10,7 +10,7 @@ namespace CPRG102.Properties.App.Controllers
 {
     public class OwnerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int a, int b, int c)
         {
             var owners = OwnerManager.GetAll();
             return View(owners);

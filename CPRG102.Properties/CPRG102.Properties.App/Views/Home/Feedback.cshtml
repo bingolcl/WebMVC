@@ -1,0 +1,83 @@
+﻿@{
+    var a = ViewData["a"];
+    var b = ViewData["b"];
+    var c = ViewData["c"];
+}
+
+<h2>Feedback - @a | @b | @c</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Full Name:</td>
+        <td><input type="text" id="uxName" value="" /></td>
+    </tr>
+    <tr>
+        <td>Province:</td>
+        <td><select id="uxProvinces" /></td>
+    </tr>
+    <tr>
+        <td>Comments:</td>
+        <td><textarea id="uxComment" rows="4"></textarea></td>
+    </tr>
+</table>
+
+<button class="btn btn-success" id="uxSubmitComments">Submit Comments</button>
+
+<div id="uxFeedback" style="margin-top:30px;"></div>
+
+@section Scripts {
+    <script type="text/javascript">
+        var provinces = new Array("BC", "AB", "SK", "MB", "ON");
+        function poplulateProvinces() {
+            var dropDown = document.getElementById("uxProvinces");
+            $.each(provinces, function (index, prov) {
+                var option = new Option(prov, prov);
+                dropDown.append(option);
+                //dropDown.options[dropDown.length] = new Option(prov,prov);
+            });
+        };
+        function processComments() {
+            //alert("submit");         
+            feedback.fullName = $('#uxName').val();
+            feedback.province = $('#uxProvinces').val();
+            feedback.comment = $('#uxComment').val();
+
+            $("#uxFeedback").html(feedback.getFeedback());
+
+            //var id = 0;
+            //$.ajax({
+            //    method: 'GET',
+            //    url: '/Rentals/GetFilteredProperties',
+            //    data: { id: id },
+            //    beforeSend: function () {
+            //        $("#uxFilteredTypes").html('Loading...');
+            //    },
+            //}).done(function (result, statusText, xhdr) {
+            //    $("#uxFilteredTypes").html(result);
+            //}).fail(function (xhdr, statusText, errorText) {
+            //    $("#uxFilteredTypes").html(JSON.stringify(xhdr));
+            //})
+        };
+        var feedback = new Object();
+        feedback.fullName = "";
+        feedback.province = "";
+        feedback.comment = "";
+        feedback.getFeedback = function () {
+            return this.fullName + ' lives in ' + this.province + " had comments: " + this.comment; 
+        };
+
+        $(document).ready(function(){
+            //alert("dom ready");
+            poplulateProvinces();
+            $('#uxSubmitComments').click(function () {
+                processComments();
+            });
+            $('#uxProvinces').change(function () {
+                var prov = $('#uxProvinces').val();
+                alert(prov);
+            });
+        });
+
+        
+    </script>
+}

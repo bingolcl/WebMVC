@@ -6,4 +6,3 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Do
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Domain\obj\Debug\netcoreapp2.1\CPRG102.Properties.Domain.AssemblyInfo.cs
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Domain\obj\Debug\netcoreapp2.1\CPRG102.Properties.Domain.dll
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Domain\obj\Debug\netcoreapp2.1\CPRG102.Properties.Domain.pdb
-C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Domain\obj\Debug\netcoreapp2.1\CPRG102.Properties.Domain.csprojAssemblyReference.cache

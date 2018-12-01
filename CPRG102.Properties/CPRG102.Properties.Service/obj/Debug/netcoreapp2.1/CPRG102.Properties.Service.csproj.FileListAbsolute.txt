@@ -1,0 +1,17 @@
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Service.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Service.runtimeconfig.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Service.runtimeconfig.dev.json
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Service.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Service.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.RazorAssemblyInfo.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.RazorAssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.RazorTargetAssemblyInfo.cache
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.csproj.CopyComplete

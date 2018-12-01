@@ -7,6 +7,7 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-theme.css" />*@
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -31,12 +32,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Rentals" asp-action="Index">Rentals</a></li>
-                    <li><a asp-area="" asp-controller="Owner" asp-action="Index">Owners</a></li>
+                    <li><a asp-area="" asp-controller="Owner" asp-action="Index" asp-route-a="1" asp-route-b="2" asp-route-c="3">Owners</a></li>
                     <li><a asp-area="" asp-controller="PropertyType" asp-action="Index">Types</a></li>
                     <li><a asp-area="" asp-controller="Rentals" asp-action="Search">Search</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Feedback" asp-route-a="1" asp-route-b="2" asp-route-c="3">Feedback</a></li>
                 </ul>
             </div>
         </div>
@@ -46,12 +46,11 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - CPRG102.Properties.App</p>
-        </footer>
     </div>
-
+    
+    <footer class="fix-footer">
+        <p>&copy; 2018 - CPRG102.Properties.App</p>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

@@ -58,6 +58,12 @@ namespace CPRG102.Properties.App
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "filter",
+                    template: "{controller=Home}/{action=Index}/{a?}/{b?}/{c?}");
+            });
         }
     }
 }

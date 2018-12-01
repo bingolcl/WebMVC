@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG102.Properties.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG102.Properties.Data", "CPRG102.Properties.Data\CPRG102.Properties.Data.csproj", "{BBFFD740-F5CA-433F-81A3-5BEE38DC5AC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG102.Properties.BLL", "CPRG102.Properties.BLL\CPRG102.Properties.BLL.csproj", "{E9D3CEFD-9B54-45F6-A18C-94136CC86D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG102.Properties.BLL", "CPRG102.Properties.BLL\CPRG102.Properties.BLL.csproj", "{E9D3CEFD-9B54-45F6-A18C-94136CC86D02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG102.Properties.App", "CPRG102.Properties.App\CPRG102.Properties.App.csproj", "{0A725A91-3A4F-44CB-87CB-446753299161}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG102.Properties.App", "CPRG102.Properties.App\CPRG102.Properties.App.csproj", "{0A725A91-3A4F-44CB-87CB-446753299161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG102.Properties.Service", "CPRG102.Properties.Service\CPRG102.Properties.Service.csproj", "{A811D9BE-4B08-484B-8806-F80D084B8E46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG102.Inventory.Repository", "..\CPRG102.Inventory\CPRG102.Inventory.Repository\CPRG102.Inventory.Repository.csproj", "{5AAFEDC5-8346-4DF4-B164-249A83E8F434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{0A725A91-3A4F-44CB-87CB-446753299161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A725A91-3A4F-44CB-87CB-446753299161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A725A91-3A4F-44CB-87CB-446753299161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A811D9BE-4B08-484B-8806-F80D084B8E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A811D9BE-4B08-484B-8806-F80D084B8E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A811D9BE-4B08-484B-8806-F80D084B8E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A811D9BE-4B08-484B-8806-F80D084B8E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAFEDC5-8346-4DF4-B164-249A83E8F434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAFEDC5-8346-4DF4-B164-249A83E8F434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAFEDC5-8346-4DF4-B164-249A83E8F434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAFEDC5-8346-4DF4-B164-249A83E8F434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

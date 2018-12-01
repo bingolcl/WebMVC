@@ -14,6 +14,13 @@ namespace CPRG102.Properties.App.Controllers
         {
             return View();
         }
+        public IActionResult Feedback(string a, string b, string c)
+        {
+            ViewData["a"] = a;
+            ViewData["b"] = b;
+            ViewData["c"] = c;
+            return View();
+        }
 
         public IActionResult About()
         {
