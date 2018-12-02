@@ -16,12 +16,10 @@ namespace AssetTracking.Domain
         public string SerialNumber { get; set; }
         public int AssetTypeId { get; set; }
         public int ManufacturerId { get; set; }
-        public int ModelId { get; set; }
         public string AssignedTo { get; set; }
 
         //navigation properties
         public Manufacturer Manufacturer { get; set; }
-        public Model Model { get; set; }
         public AssetType AssetType { get; set; }
     }
 }

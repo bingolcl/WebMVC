@@ -17,7 +17,6 @@ namespace AssetTracking.BLL
             var assets = _assetContext.Assets.
                             Include(a => a.AssetType).
                             Include(a => a.Manufacturer).
-                            Include(a => a.Model).
                             ToList();
             return assets;
         }
@@ -38,7 +37,6 @@ namespace AssetTracking.BLL
         {
             var a = _assetContext.Assets.Find(asset.Id);
             a.ManufacturerId = asset.ManufacturerId;
-            a.ModelId = asset.ModelId;
             a.SerialNumber = asset.SerialNumber;
             a.TagNumber = asset.TagNumber;
             a.AssetTypeId = asset.AssetTypeId;

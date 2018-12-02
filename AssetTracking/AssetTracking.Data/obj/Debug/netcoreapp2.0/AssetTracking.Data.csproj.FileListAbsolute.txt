@@ -4,3 +4,17 @@ c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcore
 c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csproj.CoreCompileInputs.cache
 c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfoInputs.cache
 c:\users\cecilia\source\repos\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfo.cs
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.deps.json
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.runtimeconfig.json
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.runtimeconfig.dev.json
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.dll
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Data.pdb
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Domain.dll
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\bin\Debug\netcoreapp2.0\AssetTracking.Domain.pdb
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csprojAssemblyReference.cache
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csproj.CoreCompileInputs.cache
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfoInputs.cache
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.AssemblyInfo.cs
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.csproj.CopyComplete
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.dll
+C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Data\obj\Debug\netcoreapp2.0\AssetTracking.Data.pdb

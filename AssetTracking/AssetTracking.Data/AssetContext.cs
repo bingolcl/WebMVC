@@ -16,7 +16,7 @@ namespace AssetTracking.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //Change the connection string here for your home computer/lab computer
-            optionsBuilder.UseSqlServer(@"Server=localhost;
+            optionsBuilder.UseSqlServer(@"Server=BINGOLCL\SQLEXPRESS;
                                           Database=AssetTracking;
                                           Trusted_Connection=True;");
         }
