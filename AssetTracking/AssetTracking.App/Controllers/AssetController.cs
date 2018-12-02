@@ -13,15 +13,26 @@ namespace AssetTracking.App.Controllers
     public class AssetController : Controller
     {
         // GET: Asset
-        public ActionResult Index()
+        public IActionResult GetAll()
         {
-            return View();
+            var assets = AssetManager.GetAll();
+            var assetList = assets.
+                Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
+                {
+                    Description = a.Description,
+                    Type = a.AssetType.Name,
+                    TagNumber = a.TagNumber,
+                    SerialNumber = a.SerialNumber,
+                    Empoyee = a.AssignedTo ?? "",
+                    Department = a.AssignedTo == null ? "" : "something"
+                });
+            return View(assetList);
         }
 
-        public IActionResult Search()
+        public IActionResult Index()
         {
-            var searchList = new AssetSearchViewModel();
-            return View(searchList);
+            var filters = new AssetSearchViewModel();
+            return View(filters);
         }
         public IActionResult GetAssetsByStatus(int status)
         {
@@ -70,7 +81,19 @@ namespace AssetTracking.App.Controllers
         // GET: Asset/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new AssetAddViewModel();
+            return View(model);
+        }
+
+        public ActionResult GetModelList(int id)
+        {
+            var list = new List<Model>();
+            if(id == 0)
+            {
+                return Json(list);
+            }
+            list = ModelManger.GetAll().Where(m => m.ManufacturerId == id).ToList();
+            return Json(list);
         }
 
         // POST: Asset/Create

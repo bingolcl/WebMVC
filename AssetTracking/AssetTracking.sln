@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.Data", "Asset
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.BLL", "AssetTracking.BLL\AssetTracking.BLL.csproj", "{D2FEB680-08B1-4589-850E-FDE1104F749E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetTracking.App", "AssetTracking.App\AssetTracking.App.csproj", "{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.App", "AssetTracking.App\AssetTracking.App.csproj", "{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetTracking.API", "AssetTracking.API\AssetTracking.API.csproj", "{09597386-E3D8-44C5-95AC-4F0ED843B74B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09597386-E3D8-44C5-95AC-4F0ED843B74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09597386-E3D8-44C5-95AC-4F0ED843B74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09597386-E3D8-44C5-95AC-4F0ED843B74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09597386-E3D8-44C5-95AC-4F0ED843B74B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

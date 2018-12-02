@@ -17,8 +17,7 @@ namespace AssetTracking.Data
         {
             //Change the connection string here for your home computer/lab computer
             optionsBuilder.UseSqlServer(@"Server=localhost;
-                                          Database=AssetTracking;
-                                          Trusted_Connection=True;");
+                                          Database=Domain;user id=sa;password=SQLPassword;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -184,8 +183,38 @@ namespace AssetTracking.Data
                     Id = 23,
                     Name = "SPA525G2",
                     ManufacturerId = 9
-                }
-                );
+                });
+            modelBuilder.Entity<Asset>().HasData(
+                new Asset
+                {
+                    Id = 1,
+                    TagNumber = "Z396",
+                    AssetTypeId = 1,
+                    ModelId = 1,
+                    Description = "Office Computer",
+                    AssignedTo = "DO1001",
+                    SerialNumber = "X821908-014"
+                },
+                new Asset
+                {
+                    Id = 2,
+                    TagNumber = "H591",
+                    AssetTypeId = 1,
+                    ModelId = 2,
+                    Description = "Office2 Computer",
+                    AssignedTo = "CA1002",
+                    SerialNumber = "X821908-080"
+                },
+                new Asset
+                {
+                    Id = 3,
+                    TagNumber = "P655",
+                    AssetTypeId = 2,
+                    ModelId = 5,
+                    Description = "HR laptop",
+                    AssignedTo = "SM1003",
+                    SerialNumber = "X85981-254"
+                });
         }
     }
 }

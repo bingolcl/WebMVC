@@ -12,8 +12,8 @@ namespace AssetTracking.Domain
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+
         //navigation property
-        public ICollection<Asset> Assets { get; set; }
         public ICollection<Model> Models { get; set; }
     }
 }

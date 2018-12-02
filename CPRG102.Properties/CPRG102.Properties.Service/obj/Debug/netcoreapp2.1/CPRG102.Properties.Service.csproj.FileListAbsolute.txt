@@ -15,3 +15,9 @@ C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Se
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.dll
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Inventory.Repository.pdb
 C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\obj\Debug\netcoreapp2.1\CPRG102.Properties.Service.csproj.CopyComplete
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.BLL.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.dll
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.BLL.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Domain.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\CPRG102.Properties\CPRG102.Properties.Service\bin\Debug\netcoreapp2.1\CPRG102.Properties.Data.pdb

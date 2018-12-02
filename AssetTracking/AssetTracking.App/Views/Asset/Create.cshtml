@@ -1,0 +1,89 @@
+﻿@model AssetTracking.App.Models.AssetAddViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>AssetAddViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TagNumber" class="control-label"></label>
+                <input asp-for="TagNumber" class="form-control" />
+                <span asp-validation-for="TagNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SerialNumber" class="control-label"></label>
+                <input asp-for="SerialNumber" class="form-control" />
+                <span asp-validation-for="SerialNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssetTypeId" class="control-label"></label>
+                <select asp-for="AssetTypeId" asp-items="@Model.Types" id="uxType" class="form-control">
+                    <option>Please select a type</option>
+                </select>
+                <span asp-validation-for="AssetTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufacturerId" class="control-label"></label>
+                <select asp-for="ManufacturerId" asp-items="@Model.Manufacturers" id="uxManufacturers" class="form-control">
+                    <option>Please select a manufacturer</option>
+                </select>
+                <span asp-validation-for="ManufacturerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelId" class="control-label"></label>
+                <select asp-for="ModelId" id="uxModels" class="form-control"></select>
+                <span asp-validation-for="ModelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        function populateModels(id) {
+            var dropDown = document.getElementById('uxModels');
+            $.ajax({
+                method: 'GET',
+                url: '/Asset/GetModelList',
+                data: { id: id }
+            }).done(function (data, statusText, xhdr) {
+                $.each(data, function (index, model) {                    
+                    dropDown.options[dropDown.length] = new Option(model.name, String(model.id));
+                });
+            }).fail(function (xhdr, statusText, errorText) {
+                dropDown.options[dropDown.length] = new Option("Error", 0);
+            })
+        }
+        $(document).ready(function () {
+            populateModels(0);
+            $('#uxManufacturers').change(function () {
+                manufacturerId = $('#uxManufacturers').val();
+                populateModels(manufacturerId);
+            });
+            $('#uxType').change(function () {
+                alert($('#uxType').val());
+            });
+        });
+
+    </script>
+    
+}

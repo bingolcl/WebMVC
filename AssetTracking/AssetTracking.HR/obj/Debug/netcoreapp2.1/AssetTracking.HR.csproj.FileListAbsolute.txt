@@ -1,0 +1,9 @@
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\bin\Debug\netcoreapp2.1\AssetTracking.HR.deps.json
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\bin\Debug\netcoreapp2.1\AssetTracking.HR.dll
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.csprojAssemblyReference.cache
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.csproj.CoreCompileInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.AssemblyInfoInputs.cache
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.AssemblyInfo.cs
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\bin\Debug\netcoreapp2.1\AssetTracking.HR.pdb
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.dll
+C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.HR\obj\Debug\netcoreapp2.1\AssetTracking.HR.pdb

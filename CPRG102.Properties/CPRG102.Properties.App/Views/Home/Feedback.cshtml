@@ -19,6 +19,11 @@
         <td>Comments:</td>
         <td><textarea id="uxComment" rows="4"></textarea></td>
     </tr>
+
+    <tr>
+        <td>Type:</td>
+        <td><select id="uxPropertyTypes" /></td>
+    </tr>
 </table>
 
 <button class="btn btn-success" id="uxSubmitComments">Submit Comments</button>
@@ -44,20 +49,25 @@
 
             $("#uxFeedback").html(feedback.getFeedback());
 
-            //var id = 0;
-            //$.ajax({
-            //    method: 'GET',
-            //    url: '/Rentals/GetFilteredProperties',
-            //    data: { id: id },
-            //    beforeSend: function () {
-            //        $("#uxFilteredTypes").html('Loading...');
-            //    },
-            //}).done(function (result, statusText, xhdr) {
-            //    $("#uxFilteredTypes").html(result);
-            //}).fail(function (xhdr, statusText, errorText) {
-            //    $("#uxFilteredTypes").html(JSON.stringify(xhdr));
-            //})
         };
+
+        function populatePropertyTypes() {
+            var dropDown = document.getElementById('uxPropertyTypes');
+
+            $.ajax({
+                method: 'GET',
+                url: 'https://localhost:44382/api/PropertyType',                
+            }).done(function (data, statusText, xhdr) {
+                $.each(data, function (index,type) {
+                    var option = new Option(type.style, String(type.id));
+                    dropDown.append(option);
+                    //dropDown.options[dropDown.length] = new Option(prov,prov);
+                });
+            }).fail(function (xhdr, statusText, errorText) {
+                $("#uxPropertyTypes").html(JSON.stringify(xhdr));
+            })
+        }
+
         var feedback = new Object();
         feedback.fullName = "";
         feedback.province = "";
@@ -69,6 +79,7 @@
         $(document).ready(function(){
             //alert("dom ready");
             poplulateProvinces();
+            populatePropertyTypes();
             $('#uxSubmitComments').click(function () {
                 processComments();
             });

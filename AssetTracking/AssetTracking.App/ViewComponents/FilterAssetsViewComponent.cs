@@ -24,7 +24,6 @@ namespace AssetTracking.App.ViewComponents
                     Description = a.Description,
                     SerialNumber = a.SerialNumber,
                     Type= a.AssetType.Name,
-                    Manufacturer = a.Manufacturer.Name,
 
                 });
             }

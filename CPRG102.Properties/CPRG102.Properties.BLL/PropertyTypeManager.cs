@@ -28,6 +28,13 @@ namespace CPRG102.Properties.BLL
             return types;
         }
 
+        public static PropertyType Find(int id)
+        {
+            var context = new RentalsContext();
+            var type = context.PropertyTypes.Find(id);
+            return type;
+        }
+
         public static void Add(PropertyType type)
         {
             var context = new RentalsContext();

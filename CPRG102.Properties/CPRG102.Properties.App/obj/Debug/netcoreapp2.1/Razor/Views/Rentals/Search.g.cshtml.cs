@@ -68,12 +68,12 @@ using CPRG102.Properties.App.Models;
             WriteLiteral("    ");
             EndContext();
             BeginContext(221, 111, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3dccab81702f4536a0ef5fba5e9ea714", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d468fc1c07ec49c4880afa355cc42987", async() => {
                 BeginContext(268, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(278, 39, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3261754113664d49b320fb5047ae420a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be723727b26f4ad8b836481a62878a11", async() => {
                     BeginContext(296, 12, true);
                     WriteLiteral("All Avilable");
                     EndContext();

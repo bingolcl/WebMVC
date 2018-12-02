@@ -12,10 +12,13 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\CPRG102.Inventory\CPRG102.Inventory.Repository\CPRG102.Inventory.Repository.csproj" />
+    <ProjectReference Include="..\CPRG102.Properties.BLL\CPRG102.Properties.BLL.csproj" />
+    <ProjectReference Include="..\CPRG102.Properties.Domain\CPRG102.Properties.Domain.csproj" />
   </ItemGroup>
 
 </Project>

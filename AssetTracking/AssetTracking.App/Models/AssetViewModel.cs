@@ -11,15 +11,19 @@ namespace AssetTracking.App.Models
 {
     public class AssetListViewModel
     {
-
-        public string TagNumber { get; set; }
+        [DisplayName("Asset Description")]
         public string Description { get; set; }
-        public string SerialNumber { get; set; }
+        [DisplayName("Asset Type Name")]
         public string Type { get; set; }
-        public string Manufacturer { get; set; }
-        public string Model { get; set; }
-        [DisplayName("Assigned To")]
-        public string AssignedTo { get; set; }
+        [DisplayName("Asset Tag Number")]
+        public string TagNumber { get; set; }
+        [DisplayName("Serial Number")]
+        public string SerialNumber { get; set; }
+        [DisplayName("Employee Name")]
+        public string Empoyee { get; set; }
+        [DisplayName("Department Location")]
+        public string Department { get; set; }
+
     }
 
     public class AssetSearchViewModel
@@ -55,30 +59,29 @@ namespace AssetTracking.App.Models
 
     public class AssetAddViewModel
     {
-        [DisplayName("Tag#"), Required]
+        [DisplayName("Tag Number"), Required]
         public string TagNumber { get; set; }
         [Required]
         public string Description { get; set; }
-        [DisplayName("Serial#"), Required]
+        [DisplayName("Serial Number"), Required]
         public string SerialNumber { get; set; }
         [DisplayName("Type"), Required]
-        public string TypeId { get; set; }
+        public string AssetTypeId { get; set; }
         [DisplayName("Manufacturer"), Required]
         public string ManufacturerId { get; set; }
         [DisplayName("Model"), Required]
         public string ModelId { get; set; }
-        [DisplayName("Assigned To")]
-        public string AssignedTo { get; set; }
+
 
         public IEnumerable<SelectListItem> Types
         {
             get
             {
-                return AssetTypeManager.GetAll().Select(o =>
+                return AssetTypeManager.GetAll().Select(t =>
                 new SelectListItem
                 {
-                    Text = o.Name,
-                    Value = o.Id.ToString()
+                    Text = t.Name,
+                    Value = t.Id.ToString()
                 });
             }
         }
@@ -87,26 +90,26 @@ namespace AssetTracking.App.Models
         {
             get
             {
-                return ManufacturerManager.GetAll().Select(o =>
+                return ManufacturerManager.GetAll().Select(m =>
                 new SelectListItem
                 {
-                    Text = o.Name,
-                    Value = o.Id.ToString()
+                    Text = m.Name,
+                    Value = m.Id.ToString()
                 });
             }
         }
 
-        public IEnumerable<SelectListItem> Models
-        {
-            get
-            {
-                return ModelManger.GetAll().Select(o =>
-                new SelectListItem
-                {
-                    Text = o.Name,
-                    Value = o.Id.ToString()
-                });
-            }
-        }
+        //public IEnumerable<SelectListItem> Models
+        //{
+        //    get
+        //    {
+        //        return ModelManger.GetAll().Select(o =>
+        //        new SelectListItem
+        //        {
+        //            Text = o.Name,
+        //            Value = o.Id.ToString()
+        //        });
+        //    }
+        //}
     }
 }

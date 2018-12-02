@@ -26,6 +26,11 @@ namespace CPRG102.Properties.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigin",
+                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +44,7 @@ namespace CPRG102.Properties.Service
             {
                 app.UseHsts();
             }
-
+            app.UseCors("AllowAllOrigin");
             app.UseHttpsRedirection();
             app.UseMvc();
         }
