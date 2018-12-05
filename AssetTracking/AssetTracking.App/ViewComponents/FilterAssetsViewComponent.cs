@@ -18,9 +18,7 @@ namespace AssetTracking.App.ViewComponents
             var employees = await employeeController.GetEmployeesAsync();
             //int intID = int.Parse(id);
             IEnumerable<AssetListViewModel> filteredAssets;
-            if (filter.assigned == -1 && filter.employee == -1 && filter.type == -1)
-            {
-                filteredAssets = assets.
+            filteredAssets = assets.
                 Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
                 {
                     Description = a.Description,
@@ -29,12 +27,62 @@ namespace AssetTracking.App.ViewComponents
                     SerialNumber = a.SerialNumber,
                     Employee = employees.Where(e => e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
                 });
-                return View(filteredAssets);
+
+            if (filter.assigned == 0)
+            {
+                filteredAssets = assets.Where(a => String.IsNullOrEmpty(a.AssignedTo)).
+                    Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
+                    {
+                        Description = a.Description,
+                        Type = a.AssetType.Name,
+                        TagNumber = a.TagNumber,
+                        SerialNumber = a.SerialNumber,
+                        Employee = employees.Where(e => e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
+                    });
             }
 
+            if (filter.assigned == 1)
+            {
+                filteredAssets = assets.Where(a => !String.IsNullOrEmpty(a.AssignedTo)).
+                    Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
+                    {
+                        Description = a.Description,
+                        Type = a.AssetType.Name,
+                        TagNumber = a.TagNumber,
+                        SerialNumber = a.SerialNumber,
+                        Employee = employees.Where(e => e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
+                    });
+            }
 
-            //pass the collection of AssetListViewModels to the view
-            return View(new List<AssetListViewModel>());
+            if (filter.type != -1)
+            {
+                filteredAssets = assets.Where(a=>a.AssetType.Id == filter.type).
+                    Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
+                    {
+                        Description = a.Description,
+                        Type = a.AssetType.Name,
+                        TagNumber = a.TagNumber,
+                        SerialNumber = a.SerialNumber,
+                        Employee = employees.Where(e => e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
+                    });
+            }
+
+            if (filter.employee != -1)
+            {
+                filteredAssets = assets.
+                    Select(a => new AssetListViewModel
+                    {
+                        Description = a.Description,
+                        Type = a.AssetType.Name,
+                        TagNumber = a.TagNumber,
+                        SerialNumber = a.SerialNumber,
+                        Employee = employees.Where(e => e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
+                    });
+                filteredAssets = filteredAssets.Where(l => l.Employee.Id == filter.employee);
+                
+            }
+            return View(filteredAssets);
+
         }
     }
 }

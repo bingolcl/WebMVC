@@ -13,8 +13,16 @@
 
 <div style="padding-top:50px;">
     <h2>Assets</h2>
-    @*select drop down for property types*@
-    <select id="uxType" asp-items="@Model.Types">
+    <select id="uxAssigns">
+        <option value="-1">All</option>
+        <option value="0">Unassigned</option>
+        <option value="1">Assigned</option>
+    </select>
+    @*select drop down for types*@
+    <select id="uxTypes" asp-items="@Model.Types">
+        <option value="-1">All</option>
+    </select>
+    <select id="uxEmployees">
         <option value="-1">All</option>
     </select>
 </div>
@@ -26,26 +34,47 @@
 
 @section Scripts {
     <script>
+        var assign = -1, type = -1, employee = -1;
+        
+        function populateEmployees() {
+            var dropDown = $('#uxEmployees');
+            $.ajax({
+                method: 'GET',
+                url: 'https://localhost:44383/api/Employee'
+            }).done(function(data, statusText, xhdr) {
+                $.each(data,
+                    function(index, employee) {
+                        var option = new Option(employee.firstName + ' ' + employee.lastName, employee.id);
+                        dropDown.append(option);
+                    });
+            }).fail(function(xhdr, statusText, errorText) {
+                dropDown.options[dropDown.length] = new Option("Error", 0);
+            });
+        }
+
+        function populateTable() {
+            assign = $('#uxAssigns').val();
+            type = $("#uxTypes").val();
+            employee = $('#uxEmployees').val();
+
+            $.ajax({
+                method: 'POST',
+                url: '/Asset/GetAssetsByFilters',
+                data: {
+                    filter: { "assigned": assign, "employee": employee, "type": type }
+                }
+            }).done(function(result, statusText, xhdr) {
+                $("#uxFilteredAssets").html(result);
+            }).fail(function(xhdr, statusText, errorText) {
+                $("#uxFilteredAssets").html(JSON.stringify(xhdr));
+            });
+        }
         //user jquery's ajax method to call a view component to display
         $(document).ready(function () {
-            //alert('test');
-            $("#uxType").change(function () {
-                var id = $("#uxType").val();
-                //alert(id);
-                $.ajax({
-                    method: 'GET',
-                    url: '/Asset/GetAssetsByFilters',
-                    data: {
-                        filter: { "assigned": -1, "employee": -1, "type": -1 }
-                    }
-                }).done(function (result, statusText, xhdr) {
-                    $("#uxFilteredAssets").html(result);
-                }).fail(function (xhdr, statusText, errorText) {
-                    $("#uxFilteredAssets").html(JSON.stringify(xhdr));
-                })
-                //$("#uxFilteredTypes").load('/Rentals/GetFilteredProperties/'+id);
+            populateEmployees();
+            $("#uxAssigns,#uxTypes,#uxEmployees").change(function () {
+                populateTable();
             });
-
         });
     </script>
 }

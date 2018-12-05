@@ -26,7 +26,7 @@ namespace AssetTracking.App.Models
         {
             get
             {
-                return Employee.FirstName + " " + Employee.LastName;
+                return Employee == null ? "" : Employee.FirstName + " " + Employee.LastName;
             }
 
         }
@@ -35,7 +35,7 @@ namespace AssetTracking.App.Models
         {
             get
             {
-                return Employee.Department.Name + ", " + Employee.Department.Location;
+                return Employee == null ? "" : Employee.Department.Name + ", " + Employee.Department.Location;
             }
         }
 

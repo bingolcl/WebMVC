@@ -40,10 +40,13 @@ namespace AssetTracking.App.Controllers
             var filters = new AssetSearchViewModel();
             return View(filters);
         }
+
+        [HttpPost]
         public IActionResult GetAssetsByFilters(Filters filter)
         {
             return ViewComponent("FilterAssets", filter);
         }
+
         public ActionResult GetModelList(int id)
         {
             var list = new List<Model>();
