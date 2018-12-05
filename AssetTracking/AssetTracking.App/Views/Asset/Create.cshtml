@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="TagNumber" class="control-label"></label>
-                <input asp-for="TagNumber" class="form-control" />
+                <input asp-for="TagNumber" class="form-control"/>
                 <span asp-validation-for="TagNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,14 +30,14 @@
             <div class="form-group">
                 <label asp-for="AssetTypeId" class="control-label"></label>
                 <select asp-for="AssetTypeId" asp-items="@Model.Types" id="uxType" class="form-control">
-                    <option>Please select a type</option>
+                    <option value="">Please select a type</option>
                 </select>
                 <span asp-validation-for="AssetTypeId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ManufacturerId" class="control-label"></label>
                 <select asp-for="ManufacturerId" asp-items="@Model.Manufacturers" id="uxManufacturers" class="form-control">
-                    <option>Please select a manufacturer</option>
+                    <option value="">Please select a manufacturer</option>
                 </select>
                 <span asp-validation-for="ManufacturerId" class="text-danger"></span>
             </div>
@@ -45,6 +45,13 @@
                 <label asp-for="ModelId" class="control-label"></label>
                 <select asp-for="ModelId" id="uxModels" class="form-control"></select>
                 <span asp-validation-for="ModelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignedTo" class="control-label"></label>
+                <select asp-for="AssignedTo" id="uxEmployees" class="form-control">
+                    <option value="">Please select an employee</option>
+                </select>                
+                <span asp-validation-for="AssignedTo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
@@ -60,30 +67,53 @@
 @section Scripts {
     <script>
         function populateModels(id) {
-            var dropDown = document.getElementById('uxModels');
+            var dropDown = $('#uxModels');
+            if (id == 0) {
+                dropDown.prop('disabled', true);
+            } else
+            {
+                $.ajax({
+                    method: 'GET',
+                    url: '/Asset/GetModelList',
+                    data: { id: id }
+                }).done(function (data, statusText, xhdr) {
+                    dropDown.prop('disabled', false);
+                    dropDown.empty();
+                    $.each(data, function (index, model) {
+                        var option = new Option(model.name, String(model.id));
+                        dropDown.append(option);
+                    });
+                }).fail(function (xhdr, statusText, errorText) {
+                    dropDown.options[dropDown.length] = new Option("Error", 0);
+                });
+            }
+        }
+        function populateEmployees() {
+            var dropDown = $('#uxEmployees');
             $.ajax({
                 method: 'GET',
-                url: '/Asset/GetModelList',
-                data: { id: id }
+                url: 'https://localhost:44383/api/Employee'
             }).done(function (data, statusText, xhdr) {
-                $.each(data, function (index, model) {                    
-                    dropDown.options[dropDown.length] = new Option(model.name, String(model.id));
+                $.each(data, function (index, employee) { 
+                    var option = new Option(employee.firstName + ' ' + employee.lastName, employee.employeeNumber);
+                    dropDown.append(option);
                 });
             }).fail(function (xhdr, statusText, errorText) {
                 dropDown.options[dropDown.length] = new Option("Error", 0);
             })
+
         }
+
         $(document).ready(function () {
             populateModels(0);
+            populateEmployees();
             $('#uxManufacturers').change(function () {
                 manufacturerId = $('#uxManufacturers').val();
                 populateModels(manufacturerId);
             });
-            $('#uxType').change(function () {
-                alert($('#uxType').val());
-            });
         });
 
+        
     </script>
-    
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }

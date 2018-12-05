@@ -12,7 +12,7 @@ namespace AssetTracking.Domain
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-
+        [Required]
         public int ManufacturerId { get; set; }
         //navigation property
         public ICollection<Asset> Assets { get; set; }

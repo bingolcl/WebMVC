@@ -1,21 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using AssetTracking.App.Models;
 using AssetTracking.BLL;
 using AssetTracking.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace AssetTracking.App.Controllers
 {
     public class AssetController : Controller
     {
         // GET: Asset
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
             var assets = AssetManager.GetAll();
+            var employeeController = new EmployeeController();
+            var employees = await employeeController.GetEmployeesAsync();
+
             var assetList = assets.
                 Select(a => new AssetListViewModel //convert to a ViewModel from RentalProperty
                 {
@@ -23,9 +29,9 @@ namespace AssetTracking.App.Controllers
                     Type = a.AssetType.Name,
                     TagNumber = a.TagNumber,
                     SerialNumber = a.SerialNumber,
-                    Empoyee = a.AssignedTo ?? "",
-                    Department = a.AssignedTo == null ? "" : "something"
-                });
+                    Employee = employees.Where(e=>e.EmployeeNumber == a.AssignedTo).FirstOrDefault(),
+                });          
+            
             return View(assetList);
         }
 
@@ -34,48 +40,19 @@ namespace AssetTracking.App.Controllers
             var filters = new AssetSearchViewModel();
             return View(filters);
         }
-        public IActionResult GetAssetsByStatus(int status)
+        public IActionResult GetAssetsByFilters(Filters filter)
         {
-            return ViewComponent("AssetsByStatus", status);
+            return ViewComponent("FilterAssets", filter);
         }
-
-        public IActionResult GetAssetsByEmployee(int id)
+        public ActionResult GetModelList(int id)
         {
-            return ViewComponent("AssetsByEmployee", id);
-        }
-        public IActionResult GetAssetsByType(int id)
-        {
-            return ViewComponent("GetAssetsByType", id);
-        }
-
-        // POST: Asset/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Assign(int id, IFormCollection collection)
-        {
-            try
+            var list = new List<Model>();
+            if (id == 0)
             {
-                List<Asset> assets = new List<Asset>();
-                assets.Add(new Asset
-                {
-                    Id = id,
-                    AssignedTo = id.ToString()
-                }
-                );
-                // TODO: Add update logic here                
-                AssetManager.Assign(assets);
-                return RedirectToAction(nameof(Index));
+                return Json(list);
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Asset/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
+            list = ModelManger.GetAll().Where(m => m.ManufacturerId == id).ToList();
+            return Json(list);
         }
 
         // GET: Asset/Create
@@ -85,16 +62,7 @@ namespace AssetTracking.App.Controllers
             return View(model);
         }
 
-        public ActionResult GetModelList(int id)
-        {
-            var list = new List<Model>();
-            if(id == 0)
-            {
-                return Json(list);
-            }
-            list = ModelManger.GetAll().Where(m => m.ManufacturerId == id).ToList();
-            return Json(list);
-        }
+
 
         // POST: Asset/Create
         [HttpPost]
@@ -112,6 +80,41 @@ namespace AssetTracking.App.Controllers
                 return View();
             }
         }
+
+        // GET: Asset/Assign/5
+        public ActionResult Assign(int id)
+        {
+            var asset = AssetManager.Find(id);
+            var model = new AssetAssignViewModel()
+            {
+                TagNumber = asset.TagNumber,
+                SerialNumber = asset.SerialNumber,
+                Description = asset.Description,
+                Manufacturer = asset.Model.Manufacturer.Name,
+                Model = asset.Model.Name,
+                AssetType = asset.AssetType.Name,
+                AssignedTo = asset.AssignedTo
+            };
+            return View(model);
+        }
+
+        // POST: Asset/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Assign(Asset asset)
+        {
+            try
+            {
+                // TODO: Add update logic here                
+                AssetManager.Assign(asset);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        
 
         // GET: Asset/Edit/5
         public ActionResult Edit(int id)
@@ -158,5 +161,6 @@ namespace AssetTracking.App.Controllers
                 return View();
             }
         }
+
     }
 }

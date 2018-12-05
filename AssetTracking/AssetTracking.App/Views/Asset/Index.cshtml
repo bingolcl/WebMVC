@@ -1,0 +1,51 @@
+﻿@model AssetTracking.App.Models.AssetSearchViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Filters filter = new Filters()
+    {
+        assigned = -1,
+        employee = -1,
+        type = -1
+    };
+}
+
+
+<div style="padding-top:50px;">
+    <h2>Assets</h2>
+    @*select drop down for property types*@
+    <select id="uxType" asp-items="@Model.Types">
+        <option value="-1">All</option>
+    </select>
+</div>
+
+<div id="uxFilteredAssets">
+    @*this is the area wehre we will display available properties for the selected type*@
+    @await Component.InvokeAsync("FilterAssets", filter)
+</div>
+
+@section Scripts {
+    <script>
+        //user jquery's ajax method to call a view component to display
+        $(document).ready(function () {
+            //alert('test');
+            $("#uxType").change(function () {
+                var id = $("#uxType").val();
+                //alert(id);
+                $.ajax({
+                    method: 'GET',
+                    url: '/Asset/GetAssetsByFilters',
+                    data: {
+                        filter: { "assigned": -1, "employee": -1, "type": -1 }
+                    }
+                }).done(function (result, statusText, xhdr) {
+                    $("#uxFilteredAssets").html(result);
+                }).fail(function (xhdr, statusText, errorText) {
+                    $("#uxFilteredAssets").html(JSON.stringify(xhdr));
+                })
+                //$("#uxFilteredTypes").load('/Rentals/GetFilteredProperties/'+id);
+            });
+
+        });
+    </script>
+}

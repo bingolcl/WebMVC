@@ -12,3 +12,17 @@ C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debu
 C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorTargetAssemblyInfo.cache
 C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.dll
 C:\Users\689438\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.pdb
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.csproj.CoreCompileInputs.cache
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.AssemblyInfoInputs.cache
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.AssemblyInfo.cs
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.dll
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.pdb
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.deps.json
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.runtimeconfig.json
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.runtimeconfig.dev.json
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.dll
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.pdb
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.csprojAssemblyReference.cache
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cache
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cs
+C:\Users\cecilia\source\repos\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorTargetAssemblyInfo.cache

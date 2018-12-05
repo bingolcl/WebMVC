@@ -24,10 +24,11 @@ namespace AssetTracking.API.Controllers
         }
 
         // GET: api/Employee/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{employeeNumbers}", Name = "GetUnsigned")]
+        public IEnumerable<Employee> GetUnsigned([FromBody] IEnumerable<string> employeeNumbers)
         {
-            return "value";
+            var employees = EmployeeManager.GetUnsigned(employeeNumbers);
+            return employees;
         }
 
         // POST: api/Employee

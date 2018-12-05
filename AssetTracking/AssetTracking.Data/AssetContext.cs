@@ -16,8 +16,9 @@ namespace AssetTracking.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //Change the connection string here for your home computer/lab computer
-            optionsBuilder.UseSqlServer(@"Server=localhost;
-                                          Database=Domain;user id=sa;password=SQLPassword;");
+            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=Domain;user id=sa;password=SQLPassword;");
+            optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Domain;Trusted_Connection=True;");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

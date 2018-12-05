@@ -14,7 +14,9 @@ namespace AssetTracking.Domain
         public string Description { get; set; }        
         [Required]
         public string SerialNumber { get; set; }
+        [Required]
         public int AssetTypeId { get; set; }
+        [Required]
         public int ModelId { get; set; }
         public string AssignedTo { get; set; }
 

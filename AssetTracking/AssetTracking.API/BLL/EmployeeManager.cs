@@ -17,7 +17,12 @@ namespace AssetTracking.API.BLL
                             ToList();
             return employees;
         }
-
+        public static List<Employee> GetUnsigned(IEnumerable<string> employeeNumbers)
+        {
+            var employees = _hrContext.Employee.Where(e => !employeeNumbers.Any(es => es == e.EmployeeNumber)).
+                            ToList();
+            return employees;
+        }
         public static void Add(Employee employee)
         {
             _hrContext.Employee.Add(employee);

@@ -1,4 +1,5 @@
 ﻿using AssetTracking.BLL;
+using AssetTracking.Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,25 @@ namespace AssetTracking.App.Models
         [DisplayName("Asset Tag Number")]
         public string TagNumber { get; set; }
         [DisplayName("Serial Number")]
-        public string SerialNumber { get; set; }
+        public string SerialNumber { get; set; }        
+        public Employee Employee { get; set; }
         [DisplayName("Employee Name")]
-        public string Empoyee { get; set; }
+        public string AssignTo
+        {
+            get
+            {
+                return Employee.FirstName + " " + Employee.LastName;
+            }
+
+        }
         [DisplayName("Department Location")]
-        public string Department { get; set; }
+        public string Department
+        {
+            get
+            {
+                return Employee.Department.Name + ", " + Employee.Department.Location;
+            }
+        }
 
     }
 
@@ -40,21 +55,6 @@ namespace AssetTracking.App.Models
                 });
             }
         }
-
-
-        //public IEnumerable<SelectListItem> Employees
-        //{
-        //    get
-        //    {
-        //        return AssetTypeManager.GetAll().Select(o =>
-        //        new SelectListItem
-        //        {
-        //            Text = o.Name,
-        //            Value = o.Id.ToString()
-        //        });
-        //    }
-
-        //}
     }
 
     public class AssetAddViewModel
@@ -71,7 +71,8 @@ namespace AssetTracking.App.Models
         public string ManufacturerId { get; set; }
         [DisplayName("Model"), Required]
         public string ModelId { get; set; }
-
+        [DisplayName("Assigned To")]
+        public string AssignedTo { get; set; }
 
         public IEnumerable<SelectListItem> Types
         {
@@ -99,17 +100,30 @@ namespace AssetTracking.App.Models
             }
         }
 
-        //public IEnumerable<SelectListItem> Models
-        //{
-        //    get
-        //    {
-        //        return ModelManger.GetAll().Select(o =>
-        //        new SelectListItem
-        //        {
-        //            Text = o.Name,
-        //            Value = o.Id.ToString()
-        //        });
-        //    }
-        //}
+    }
+    public class AssetAssignViewModel
+    {
+        [DisplayName("Tag Number")]
+        public string TagNumber { get; set; }
+        [Required]
+        public string Description { get; set; }
+        [DisplayName("Serial Number")]
+        public string SerialNumber { get; set; }
+        [DisplayName("Type")]
+        public string AssetType { get; set; }
+        [DisplayName("Manufacturer")]
+        public string Manufacturer { get; set; }
+        [DisplayName("Model")]
+        public string Model { get; set; }
+        
+        public string AssignedTo { get; set; }
+
+
+    }
+    public class Filters
+    {
+        public int assigned { get; set; }
+        public int employee { get; set; }
+        public int type { get; set; }
     }
 }

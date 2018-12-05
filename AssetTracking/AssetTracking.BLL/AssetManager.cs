@@ -45,18 +45,11 @@ namespace AssetTracking.BLL
             _assetContext.SaveChanges();
         }
 
-        public static void Assign(List<Asset> assets)
+        public static void Assign(Asset asset)
         {
-            if(assets.Count > 0)
-            {
-                foreach(var asset in assets)
-                {
-                    var a = _assetContext.Assets.Find(asset.Id);
-                    a.AssignedTo = asset.AssignedTo;
-                    _assetContext.SaveChanges();
-                }
-            }
-           
+            var a = _assetContext.Assets.Find(asset.Id);
+            a.AssignedTo = asset.AssignedTo;
+            _assetContext.SaveChanges();
         }
     }
 
