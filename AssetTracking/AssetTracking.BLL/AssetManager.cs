@@ -1,4 +1,5 @@
-﻿using AssetTracking.Data;
+﻿using AssetTracking.BLL.interfaces;
+using AssetTracking.Data;
 using AssetTracking.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,10 +10,16 @@ using System.Text;
 
 namespace AssetTracking.BLL
 {
-    public class AssetManager
+    public class AssetManager:IAssetManager
     {
-        public static AssetContext _assetContext = new AssetContext();
-        public static List<Asset> GetAll()
+        AssetContext _assetContext { get; set; }
+
+        public AssetManager(AssetContext context)
+        {
+            _assetContext = context;
+        }
+
+        public List<Asset> GetAll()
         {
             var assets = _assetContext.Assets.
                             Include(a => a.AssetType).
@@ -21,19 +28,19 @@ namespace AssetTracking.BLL
             return assets;
         }
 
-        public static void Add(Asset asset)
+        public void Add(Asset asset)
         {
             _assetContext.Assets.Add(asset);
             _assetContext.SaveChanges();
         }
 
-        public static Asset Find(int id)
+        public Asset Find(int id)
         {
             var asset = _assetContext.Assets.Find(id);
             return asset;
         }
 
-        public static void Update(Asset asset)
+        public void Update(Asset asset)
         {
             var a = _assetContext.Assets.Find(asset.Id);
             a.ModelId = asset.ModelId;
@@ -45,7 +52,7 @@ namespace AssetTracking.BLL
             _assetContext.SaveChanges();
         }
 
-        public static void Assign(Asset asset)
+        public void Assign(Asset asset)
         {
             var a = _assetContext.Assets.Find(asset.Id);
             a.AssignedTo = asset.AssignedTo;

@@ -1,6 +1,7 @@
 ﻿using AssetTracking.App.Controllers;
 using AssetTracking.App.Models;
 using AssetTracking.BLL;
+using AssetTracking.BLL.interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,16 @@ namespace AssetTracking.App.ViewComponents
 {
     public class FilterAssetsViewComponent : ViewComponent
     {
+        IAssetManager AssetManager { get; set; }
+
+        public FilterAssetsViewComponent(IAssetManager manager)
+        {
+            AssetManager = manager;
+        }
         public async Task<IViewComponentResult> InvokeAsync(Filters filter)
         {
             var assets = AssetManager.GetAll(); //would be better to define the filter method in the manage class
-            var employeeController = new EmployeeController();
+            var employeeController = new EmployeeController(AssetManager);
             var employees = await employeeController.GetEmployeesAsync();
             //int intID = int.Parse(id);
             IEnumerable<AssetListViewModel> filteredAssets;

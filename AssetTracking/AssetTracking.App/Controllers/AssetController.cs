@@ -10,16 +10,30 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using AssetTracking.BLL.interfaces;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AssetTracking.App.Controllers
 {
     public class AssetController : Controller
     {
+        IAssetManager AssetManager { get; set; }
+        IModelManager ModelManager { get; set; }
+        IAssetTypeManager AssetTypeManager { get; set; }
+        IManufacturerManager ManufacturerManager { get; set; }
+
+        public AssetController(IAssetManager manager, IModelManager modelManager, IAssetTypeManager assetTypeManager, IManufacturerManager manufacturerManager)
+        {
+            AssetManager = manager;
+            ModelManager = modelManager;
+            AssetTypeManager = assetTypeManager;
+            ManufacturerManager = manufacturerManager;
+        }
         // GET: Asset
         public async Task<IActionResult> GetAll()
         {
             var assets = AssetManager.GetAll();
-            var employeeController = new EmployeeController();
+            var employeeController = new EmployeeController(AssetManager);
             var employees = await employeeController.GetEmployeesAsync();
 
             var assetList = assets.
@@ -38,6 +52,12 @@ namespace AssetTracking.App.Controllers
         public IActionResult Index()
         {
             var filters = new AssetSearchViewModel();
+            filters.Types = AssetTypeManager.GetAll().Select(o =>
+                new SelectListItem
+                {
+                    Text = o.Name,
+                    Value = o.Id.ToString()
+                });
             return View(filters);
         }
 
@@ -54,7 +74,7 @@ namespace AssetTracking.App.Controllers
             {
                 return Json(list);
             }
-            list = ModelManger.GetAll().Where(m => m.ManufacturerId == id).ToList();
+            list = ModelManager.GetAll().Where(m => m.ManufacturerId == id).ToList();
             return Json(list);
         }
 
@@ -62,6 +82,18 @@ namespace AssetTracking.App.Controllers
         public ActionResult Create()
         {
             var model = new AssetAddViewModel();
+            model.Types = AssetTypeManager.GetAll().Select(t =>
+                new SelectListItem
+                {
+                    Text = t.Name,
+                    Value = t.Id.ToString()
+                });
+            model.Manufacturers = ManufacturerManager.GetAll().Select(m =>
+                new SelectListItem
+                {
+                    Text = m.Name,
+                    Value = m.Id.ToString()
+                });
             return View(model);
         }
 
@@ -164,6 +196,8 @@ namespace AssetTracking.App.Controllers
                 return View();
             }
         }
+
+
 
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AssetTracking.API.BLL;
+using AssetTracking.API.BLL.interfaces;
 using AssetTracking.API.Domain;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +16,12 @@ namespace AssetTracking.API.Controllers
     [EnableCors("AllowAllOrigin")]
     public class EmployeeController : ControllerBase
     {
+        IEmployeeManager EmployeeManager { get; set; }
+
+        public EmployeeController(IEmployeeManager manager)
+        {
+            EmployeeManager = manager;
+        }
         // GET: api/Employee
         [HttpGet]
         public IEnumerable<Employee> Get()
@@ -23,13 +30,13 @@ namespace AssetTracking.API.Controllers
             return employees;
         }
 
-        // GET: api/Employee/5
-        [HttpGet("{employeeNumbers}", Name = "GetUnsigned")]
-        public IEnumerable<Employee> GetUnsigned([FromBody] IEnumerable<string> employeeNumbers)
-        {
-            var employees = EmployeeManager.GetUnsigned(employeeNumbers);
-            return employees;
-        }
+        //// GET: api/Employee/5
+        //[HttpGet("{employeeNumbers}", Name = "GetUnsigned")]
+        //public IEnumerable<Employee> GetUnsigned([FromBody] IEnumerable<string> employeeNumbers)
+        //{
+        //    var employees = EmployeeManager.GetUnsigned(employeeNumbers);
+        //    return employees;
+        //}
 
         // POST: api/Employee
         [HttpPost]

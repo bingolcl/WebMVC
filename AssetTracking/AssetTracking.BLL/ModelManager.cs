@@ -1,4 +1,5 @@
-﻿using AssetTracking.Data;
+﻿using AssetTracking.BLL.interfaces;
+using AssetTracking.Data;
 using AssetTracking.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,10 +10,15 @@ using System.Text;
 
 namespace AssetTracking.BLL
 {
-    public class ModelManger
+    public class ModelManager: IModelManager
     {
-        public static AssetContext _assetContext = new AssetContext();
-        public static List<Model> GetAll()
+        AssetContext _assetContext { get; set; }
+
+        public ModelManager(AssetContext context)
+        {
+            _assetContext = context;
+        }
+        public List<Model> GetAll()
         {
             var models = _assetContext.Models.
                             Include(m => m.Manufacturer).
@@ -20,19 +26,19 @@ namespace AssetTracking.BLL
             return models;
         }
 
-        public static void Add(Model model)
+        public void Add(Model model)
         {
             _assetContext.Models.Add(model);
             _assetContext.SaveChanges();
         }
 
-        public static Model Find(int id)
+        public Model Find(int id)
         {
             var model = _assetContext.Models.Find(id);
             return model;
         }
 
-        public static void Update(Model model)
+        public void Update(Model model)
         {
             var m = _assetContext.Models.Find(model.Id);
             m.Name = model.Name;

@@ -1,4 +1,5 @@
-﻿using AssetTracking.Data;
+﻿using AssetTracking.BLL.interfaces;
+using AssetTracking.Data;
 using AssetTracking.Domain;
 using System;
 using System.Collections;
@@ -8,38 +9,44 @@ using System.Text;
 
 namespace AssetTracking.BLL
 {
-    public class AssetTypeManager
+    public class AssetTypeManager : IAssetTypeManager
     {
-        public static AssetContext _assetContext = new AssetContext();
-        public static IList GetAsKeyValuePairs()
+        AssetContext _assetContext { get; set; }
+
+        public AssetTypeManager(AssetContext context)
         {
-            var types = _assetContext.AssetTypes.Select(at => new
-            {
-                at.Id,
-                at.Name
-            }).ToList();
-            return types;
+            _assetContext = context;
         }
 
-        public static List<AssetType> GetAll()
+        //public static IList GetAsKeyValuePairs()
+        //{
+        //    var types = _assetContext.AssetTypes.Select(at => new
+        //    {
+        //        at.Id,
+        //        at.Name
+        //    }).ToList();
+        //    return types;
+        //}
+
+        public  List<AssetType> GetAll()
         {
             var types = _assetContext.AssetTypes.ToList();
             return types;
         }
 
-        public static void Add(AssetType type)
+        public  void Add(AssetType type)
         {
             _assetContext.AssetTypes.Add(type);
             _assetContext.SaveChanges();
         }
 
-        public static AssetType Find(int id)
+        public  AssetType Find(int id)
         {
             var assetType = _assetContext.AssetTypes.Find(id);
             return assetType;
         }
 
-        public static void Update(AssetType assetType)
+        public  void Update(AssetType assetType)
         {
             var at = _assetContext.AssetTypes.Find(assetType.Id);
             at.Name = assetType.Name;

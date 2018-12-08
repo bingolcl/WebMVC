@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AssetTracking.BLL;
+using AssetTracking.BLL.interfaces;
 using AssetTracking.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,17 +15,19 @@ namespace AssetTracking.App.Controllers
 {
     public class EmployeeController : Controller
     {
+        IAssetManager AssetManager { get; set; }
 
         HttpClient Client;
         string URL = "https://localhost:44383/api/Employee";
 
-        public EmployeeController()
+        public EmployeeController(IAssetManager manager)
         {
             Client = new HttpClient();
             Client.BaseAddress = new Uri(URL);
             Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.
                 Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            AssetManager = manager;
 
         }
 

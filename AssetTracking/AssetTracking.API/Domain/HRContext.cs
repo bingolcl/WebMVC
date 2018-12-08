@@ -18,16 +18,16 @@ namespace AssetTracking.API.Domain
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                //optionsBuilder.UseSqlServer("Server=localhost;Database=HR;user id=sa;password=SQLPassword;");
-                optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=HR;Trusted_Connection=True;");
+//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//        {
+//            if (!optionsBuilder.IsConfigured)
+//            {
+////#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//                optionsBuilder.UseSqlServer("Server=localhost;Database=HR;user id=sa;password=SQLPassword;");
+//                //optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=HR;Trusted_Connection=True;");
                 
-            }
-        }
+//            }
+//        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

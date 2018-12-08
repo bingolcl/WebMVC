@@ -43,18 +43,7 @@ namespace AssetTracking.App.Models
 
     public class AssetSearchViewModel
     {
-        public IEnumerable<SelectListItem> Types
-        {
-            get
-            {
-                return AssetTypeManager.GetAll().Select(o =>
-                new SelectListItem
-                {
-                    Text = o.Name,
-                    Value = o.Id.ToString()
-                });
-            }
-        }
+        public IEnumerable<SelectListItem> Types { get; set; }
     }
 
     public class AssetAddViewModel
@@ -74,32 +63,9 @@ namespace AssetTracking.App.Models
         [DisplayName("Assigned To")]
         public string AssignedTo { get; set; }
 
-        public IEnumerable<SelectListItem> Types
-        {
-            get
-            {
-                return AssetTypeManager.GetAll().Select(t =>
-                new SelectListItem
-                {
-                    Text = t.Name,
-                    Value = t.Id.ToString()
-                });
-            }
-        }
+        public IEnumerable<SelectListItem> Types { get; set; }
 
-        public IEnumerable<SelectListItem> Manufacturers
-        {
-            get
-            {
-                return ManufacturerManager.GetAll().Select(m =>
-                new SelectListItem
-                {
-                    Text = m.Name,
-                    Value = m.Id.ToString()
-                });
-            }
-        }
-
+        public IEnumerable<SelectListItem> Manufacturers { get; set; }
     }
     public class AssetAssignViewModel
     {

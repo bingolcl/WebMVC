@@ -6,20 +6,22 @@ namespace AssetTracking.Data
 {
     public class AssetContext : DbContext
     {
-        public AssetContext() : base() { }
 
         public DbSet<Asset> Assets { get; set; }
         public DbSet<AssetType> AssetTypes { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Model> Models { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //Change the connection string here for your home computer/lab computer
-            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=Domain;user id=sa;password=SQLPassword;");
-            optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Domain;Trusted_Connection=True;");
+        public AssetContext(DbContextOptions<AssetContext> options)
+   : base(options)
+        { }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //Change the connection string here for your home computer/lab computer
+        //    optionsBuilder.UseSqlServer(@"Server=localhost;Database=Asset;user id=sa;password=SQLPassword;");
+        //    //optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Domain;Trusted_Connection=True;");
 
-        }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
