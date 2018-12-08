@@ -52,11 +52,11 @@ namespace AssetTracking.App.Controllers
         public IActionResult Index()
         {
             var filters = new AssetSearchViewModel();
-            filters.Types = AssetTypeManager.GetAll().Select(o =>
+            filters.Types = AssetTypeManager.GetAll().Select(t =>
                 new SelectListItem
                 {
-                    Text = o.Name,
-                    Value = o.Id.ToString()
+                    Text = t.Name,
+                    Value = t.Id.ToString()
                 });
             return View(filters);
         }
@@ -117,19 +117,32 @@ namespace AssetTracking.App.Controllers
         }
 
         // GET: Asset/Assign/5
-        public ActionResult Assign(int id)
+        public async Task<IActionResult> Assign()
         {
-            var asset = AssetManager.Find(id);
-            var model = new AssetAssignViewModel()
-            {
-                TagNumber = asset.TagNumber,
-                SerialNumber = asset.SerialNumber,
-                Description = asset.Description,
-                Manufacturer = asset.Model.Manufacturer.Name,
-                Model = asset.Model.Name,
-                AssetType = asset.AssetType.Name,
-                AssignedTo = asset.AssignedTo
-            };
+            var employeeController = new EmployeeController(AssetManager);
+            var employees = await employeeController.GetEmployeesAsync();
+            var assets = AssetManager.GetAll();
+            var employeeNumbers = assets.Select(a => a.AssignedTo);
+            var unassignedEmployees = employees.Where(e => !employeeNumbers.Any(es => es == e.EmployeeNumber)).ToList();
+            var model = new AssetAssignViewModel();
+            model.Employees = unassignedEmployees.Select(t =>
+                new SelectListItem
+                {
+                    Text = t.FirstName + " " + t.LastName,
+                    Value = t.EmployeeNumber
+                });
+            model.Desktops = assets.Where(a=>a.AssetType.Id == 1 ).Select(a =>
+                 new SelectListItem
+                 {
+                     Text = a.Description,
+                     Value = a.Id.ToString()
+                 });
+            model.Laptops = assets.Where(a => a.AssetType.Id == 2).Select(a =>
+                  new SelectListItem
+                  {
+                      Text = a.Description,
+                      Value = a.Id.ToString()
+                  });
             return View(model);
         }
 

@@ -46,13 +46,13 @@
                 <select asp-for="ModelId" id="uxModels" class="form-control"></select>
                 <span asp-validation-for="ModelId" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="AssignedTo" class="control-label"></label>
                 <select asp-for="AssignedTo" id="uxEmployees" class="form-control">
                     <option value="">Please select an employee</option>
                 </select>                
                 <span asp-validation-for="AssignedTo" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
@@ -88,28 +88,28 @@
                 });
             }
         }
-        function populateEmployees() {
-            var dropDown = $('#uxEmployees');
-            $.ajax({
-                method: 'GET',
-                url: 'https://localhost:44383/api/Employee'
-            }).done(function (data, statusText, xhdr) {
-                $.each(data, function (index, employee) { 
-                    var option = new Option(employee.firstName + ' ' + employee.lastName, employee.employeeNumber);
-                    dropDown.append(option);
-                });
-            }).fail(function (xhdr, statusText, errorText) {
-                dropDown.options[dropDown.length] = new Option("Error", 0);
-            })
+        //function populateEmployees() {
+        //    var dropDown = $('#uxEmployees');
+        //    $.ajax({
+        //        method: 'GET',
+        //        url: 'https://localhost:44383/api/Employee'
+        //    }).done(function (data, statusText, xhdr) {
+        //        $.each(data, function (index, employee) { 
+        //            var option = new Option(employee.firstName + ' ' + employee.lastName, employee.employeeNumber);
+        //            dropDown.append(option);
+        //        });
+        //    }).fail(function (xhdr, statusText, errorText) {
+        //        dropDown.options[dropDown.length] = new Option("Error", 0);
+        //    })
 
-        }
+        //}
 
         $(document).ready(function () {
             populateModels(0);
             populateEmployees();
             $('#uxManufacturers').change(function () {
                 manufacturerId = $('#uxManufacturers').val();
-                populateModels(manufacturerId);
+                //populateModels(manufacturerId);
             });
         });
 

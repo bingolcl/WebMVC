@@ -35,7 +35,7 @@ namespace AssetTracking.App.Models
         {
             get
             {
-                return Employee == null ? "" : Employee.Department.Name + ", " + Employee.Department.Location;
+                return Employee == null ? "" : Employee.Department.Location;
             }
         }
 
@@ -69,20 +69,24 @@ namespace AssetTracking.App.Models
     }
     public class AssetAssignViewModel
     {
-        [DisplayName("Tag Number")]
-        public string TagNumber { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [DisplayName("Serial Number")]
-        public string SerialNumber { get; set; }
-        [DisplayName("Type")]
-        public string AssetType { get; set; }
-        [DisplayName("Manufacturer")]
-        public string Manufacturer { get; set; }
-        [DisplayName("Model")]
-        public string Model { get; set; }
-        
-        public string AssignedTo { get; set; }
+        [DisplayName("Assigned To"), Required]
+        public string EmployeeNumber { get; set; }
+        public List<int> AssetIds { get; set; }
+
+        [DisplayName("Employee")]
+        public IEnumerable<SelectListItem> Employees { get; set; }
+        [DisplayName("Desktop PC")]
+        public IEnumerable<SelectListItem> Desktops { get; set; }
+        [DisplayName("Laptop")]
+        public IEnumerable<SelectListItem> Laptops { get; set; }
+        [DisplayName("Tablet")]
+        public IEnumerable<SelectListItem> Tablets { get; set; }
+        [DisplayName("Monitor")]
+        public IEnumerable<SelectListItem> Monitors { get; set; }
+        [DisplayName("Mobile Phone")]
+        public IEnumerable<SelectListItem> MobilePhones { get; set; }
+        [DisplayName("Desk Phone")]
+        public IEnumerable<SelectListItem> DeskPhones { get; set; }
 
 
     }
