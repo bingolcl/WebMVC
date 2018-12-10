@@ -6,7 +6,8 @@ namespace AssetTracking.Data
 {
     public class AssetContext : DbContext
     {
-
+        //Add-Migration asset-init
+        //Update-Database
         public DbSet<Asset> Assets { get; set; }
         public DbSet<AssetType> AssetTypes { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }

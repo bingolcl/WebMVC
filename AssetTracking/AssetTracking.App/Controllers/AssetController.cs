@@ -131,30 +131,53 @@ namespace AssetTracking.App.Controllers
                     Text = t.FirstName + " " + t.LastName,
                     Value = t.EmployeeNumber
                 });
-            model.Desktops = assets.Where(a=>a.AssetType.Id == 1 ).Select(a =>
+            model.Desktops = assets.Where(a=>a.AssetType.Id == 1 && a.AssignedTo == null).Select(a =>
                  new SelectListItem
                  {
                      Text = a.Description,
                      Value = a.Id.ToString()
                  });
-            model.Laptops = assets.Where(a => a.AssetType.Id == 2).Select(a =>
+            model.Laptops = assets.Where(a => a.AssetType.Id == 2 && a.AssignedTo == null).Select(a =>
                   new SelectListItem
                   {
                       Text = a.Description,
                       Value = a.Id.ToString()
                   });
+            model.Tablets = assets.Where(a => a.AssetType.Id == 3 && a.AssignedTo == null).Select(a =>
+                new SelectListItem
+                {
+                    Text = a.Description,
+                    Value = a.Id.ToString()
+                });
+            model.MobilePhones = assets.Where(a => a.AssetType.Id == 4 && a.AssignedTo == null).Select(a =>
+                new SelectListItem
+                {
+                    Text = a.Description,
+                    Value = a.Id.ToString()
+                });
+            model.DeskPhones = assets.Where(a => a.AssetType.Id == 5 && a.AssignedTo == null).Select(a =>
+                new SelectListItem
+                {
+                    Text = a.Description,
+                    Value = a.Id.ToString()
+                });
             return View(model);
         }
 
         // POST: Asset/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Assign(Asset asset)
+        public ActionResult Assign(AssetAssignViewModel Assign)
         {
             try
             {
-                // TODO: Add update logic here                
-                AssetManager.Assign(asset);
+                foreach (var id in Assign.AssetIds)
+                {
+                    var asset = AssetManager.Find(id);
+                    asset.AssignedTo = Assign.EmployeeNumber;
+                    AssetManager.Assign(asset);
+                }            
+               
                 return RedirectToAction(nameof(Index));
             }
             catch

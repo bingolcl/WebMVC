@@ -71,7 +71,23 @@ namespace AssetTracking.App.Models
     {
         [DisplayName("Assigned To"), Required]
         public string EmployeeNumber { get; set; }
-        public List<int> AssetIds { get; set; }
+
+        public List<int> AssetIds => new List<int>
+        {
+            DesktopId,
+            LaptopId,
+            TabletId,
+            MonitorId,
+            MobilePhoneId,
+            DeskPhoneId
+        };
+
+        public int DesktopId { get; set; } = 0;
+        public int LaptopId { get; set; } = 0;
+        public int TabletId { get; set; } = 0;
+        public int MonitorId { get; set; } = 0;
+        public int MobilePhoneId { get; set; } = 0;
+        public int DeskPhoneId { get; set; } = 0;
 
         [DisplayName("Employee")]
         public IEnumerable<SelectListItem> Employees { get; set; }

@@ -106,10 +106,10 @@
 
         $(document).ready(function () {
             populateModels(0);
-            populateEmployees();
+            //populateEmployees();
             $('#uxManufacturers').change(function () {
                 manufacturerId = $('#uxManufacturers').val();
-                //populateModels(manufacturerId);
+                populateModels(manufacturerId);
             });
         });
 

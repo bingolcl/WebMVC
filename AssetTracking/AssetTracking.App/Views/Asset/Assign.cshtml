@@ -14,7 +14,49 @@
                 <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <label asp-for="DesktopId" class="control-label"></label>
+                <select asp-for="DesktopId" asp-items="@Model.Desktops" id="uxType" class="form-control">
+                    <option value="">Please select a Desktop PC</option>
+                </select>
+                <span asp-validation-for="DesktopId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopId" class="control-label"></label>
+                <select asp-for="LaptopId" asp-items="@Model.Laptops" id="uxType" class="form-control">
+                    <option value="">Please select a Laptop</option>
+                </select>
+                <span asp-validation-for="LaptopId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TabletId" class="control-label"></label>
+                <select asp-for="TabletId" asp-items="@Model.Tablets" id="uxType" class="form-control">
+                    <option value="">Please select a Tablet</option>
+                </select>
+                <span asp-validation-for="TabletId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonitorId" class="control-label"></label>
+                <select asp-for="MonitorId" asp-items="@Model.Monitors" id="uxType" class="form-control">
+                    <option value="">Please select a Monitor</option>
+                </select>
+                <span asp-validation-for="MonitorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobilePhoneId" class="control-label"></label>
+                <select asp-for="MobilePhoneId" asp-items="@Model.MobilePhones" id="uxType" class="form-control">
+                    <option value="">Please select a Mobile Phone</option>
+                </select>
+                <span asp-validation-for="MobilePhoneId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskPhoneId" class="control-label"></label>
+                <select asp-for="DeskPhoneId" asp-items="@Model.DeskPhones" id="uxType" class="form-control">
+                    <option value="">Please select a Desk Phone</option>
+                </select>
+                <span asp-validation-for="DeskPhoneId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="uxAssignment" type="submit" value="Assign" class="btn btn-default" />
             </div>
         </form>
     </div>
@@ -26,4 +68,4 @@
 
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
-    }
+}
