@@ -49,7 +49,7 @@ namespace AssetTracking.App
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Asset}/{action=Index}/{id?}");
             });
         }
     }

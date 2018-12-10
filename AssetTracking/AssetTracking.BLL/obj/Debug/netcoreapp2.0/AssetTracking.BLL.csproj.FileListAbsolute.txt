@@ -46,3 +46,17 @@ C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.csproj.CopyComplete
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.dll
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.BLL.deps.json
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.BLL.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.BLL.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.Data.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.Domain.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.Data.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.0\AssetTracking.Domain.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.csprojAssemblyReference.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.csproj.CoreCompileInputs.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.AssemblyInfoInputs.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.AssemblyInfo.cs
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.csproj.CopyComplete
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.0\AssetTracking.BLL.pdb

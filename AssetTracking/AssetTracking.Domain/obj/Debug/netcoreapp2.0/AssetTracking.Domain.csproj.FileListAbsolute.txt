@@ -25,3 +25,12 @@ C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\De
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.AssemblyInfo.cs
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.dll
 C:\Users\lisaz\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.0\AssetTracking.Domain.deps.json
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.0\AssetTracking.Domain.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.0\AssetTracking.Domain.pdb
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.csprojAssemblyReference.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.csproj.CoreCompileInputs.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.AssemblyInfoInputs.cache
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.AssemblyInfo.cs
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.dll
+C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.0\AssetTracking.Domain.pdb

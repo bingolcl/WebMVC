@@ -74,34 +74,32 @@ namespace AssetTracking.App.Models
 
         public List<int> AssetIds => new List<int>
         {
-            DesktopId,
-            LaptopId,
-            TabletId,
-            MonitorId,
-            MobilePhoneId,
-            DeskPhoneId
+            DesktopId?? 0,
+            LaptopId?? 0,
+            TabletId?? 0,
+            MonitorId?? 0,
+            MobilePhoneId?? 0,
+            DeskPhoneId?? 0
         };
-
-        public int DesktopId { get; set; } = 0;
-        public int LaptopId { get; set; } = 0;
-        public int TabletId { get; set; } = 0;
-        public int MonitorId { get; set; } = 0;
-        public int MobilePhoneId { get; set; } = 0;
-        public int DeskPhoneId { get; set; } = 0;
-
-        [DisplayName("Employee")]
-        public IEnumerable<SelectListItem> Employees { get; set; }
         [DisplayName("Desktop PC")]
-        public IEnumerable<SelectListItem> Desktops { get; set; }
+        public int? DesktopId { get; set; }
         [DisplayName("Laptop")]
-        public IEnumerable<SelectListItem> Laptops { get; set; }
+        public int? LaptopId { get; set; }
         [DisplayName("Tablet")]
-        public IEnumerable<SelectListItem> Tablets { get; set; }
+        public int? TabletId { get; set; }
         [DisplayName("Monitor")]
-        public IEnumerable<SelectListItem> Monitors { get; set; }
+        public int? MonitorId { get; set; }
         [DisplayName("Mobile Phone")]
-        public IEnumerable<SelectListItem> MobilePhones { get; set; }
+        public int? MobilePhoneId { get; set; }
         [DisplayName("Desk Phone")]
+        public int? DeskPhoneId { get; set; }
+        
+        public IEnumerable<SelectListItem> Employees { get; set; }
+        public IEnumerable<SelectListItem> Desktops { get; set; }
+        public IEnumerable<SelectListItem> Laptops { get; set; }
+        public IEnumerable<SelectListItem> Tablets { get; set; }
+        public IEnumerable<SelectListItem> Monitors { get; set; }
+        public IEnumerable<SelectListItem> MobilePhones { get; set; }
         public IEnumerable<SelectListItem> DeskPhones { get; set; }
 
 

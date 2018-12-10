@@ -11,43 +11,58 @@
 }
 
 
-<div style="padding-top:50px;">
-    <h2>Assets</h2>
-    <select id="uxAssigns">
-        <option value="-1">All</option>
-        <option value="0">Unassigned</option>
-        <option value="1">Assigned</option>
-    </select>
-    @*select drop down for types*@
-    <select id="uxTypes" asp-items="@Model.Types">
-        <option value="-1">All</option>
-    </select>
-    <select id="uxEmployees">
-        <option value="-1">All</option>
-    </select>
+<br />
+<h2>Assets</h2>
+<div class="row" style="padding-top: 15px;">
+    <div class="col-md-4">
+        <label>Assignment: </label>
+        <select id="uxAssigns" class="form-control">
+            <option value="-1">All</option>
+            <option value="0">Unassigned</option>
+            <option value="1">Assigned</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label>Type: </label>
+        <select id="uxTypes" asp-items="@Model.Types" class="form-control">
+            <option value="-1">All</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label>Employee: </label>
+        <select id="uxEmployees" class="form-control">
+            <option value="-1">All</option>
+        </select>
+    </div>
 </div>
 
-<div id="uxFilteredAssets">
+
+<div id="uxFilteredAssets" style="margin-top: 20px;">
     @*this is the area wehre we will display available properties for the selected type*@
     @await Component.InvokeAsync("FilterAssets", filter)
+</div>
+
+<div style="text-align: right;">
+    <a class="btn btn-success" asp-action="Create" style="margin-right: 10px;">New Asset</a>
+    <a class="btn btn-primary" asp-action="Assign">Assignment</a>
 </div>
 
 @section Scripts {
     <script>
         var assign = -1, type = -1, employee = -1;
-        
+
         function populateEmployees() {
             var dropDown = $('#uxEmployees');
             $.ajax({
                 method: 'GET',
                 url: 'https://localhost:44383/api/Employee'
-            }).done(function(data, statusText, xhdr) {
+            }).done(function (data, statusText, xhdr) {
                 $.each(data,
-                    function(index, employee) {
+                    function (index, employee) {
                         var option = new Option(employee.firstName + ' ' + employee.lastName, employee.id);
                         dropDown.append(option);
                     });
-            }).fail(function(xhdr, statusText, errorText) {
+            }).fail(function (xhdr, statusText, errorText) {
                 dropDown.options[dropDown.length] = new Option("Error", 0);
             });
         }
@@ -63,9 +78,9 @@
                 data: {
                     filter: { "assigned": assign, "employee": employee, "type": type }
                 }
-            }).done(function(result, statusText, xhdr) {
+            }).done(function (result, statusText, xhdr) {
                 $("#uxFilteredAssets").html(result);
-            }).fail(function(xhdr, statusText, errorText) {
+            }).fail(function (xhdr, statusText, errorText) {
                 $("#uxFilteredAssets").html(JSON.stringify(xhdr));
             });
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -81,19 +82,13 @@ namespace AssetTracking.App.Controllers
         // GET: Asset/Create
         public ActionResult Create()
         {
-            var model = new AssetAddViewModel();
-            model.Types = AssetTypeManager.GetAll().Select(t =>
-                new SelectListItem
-                {
-                    Text = t.Name,
-                    Value = t.Id.ToString()
-                });
-            model.Manufacturers = ManufacturerManager.GetAll().Select(m =>
-                new SelectListItem
-                {
-                    Text = m.Name,
-                    Value = m.Id.ToString()
-                });
+            var model = new AssetAddViewModel
+            {
+                Types = AssetTypeManager.GetAll().Select(t =>
+                    new SelectListItem {Text = t.Name, Value = t.Id.ToString()}),
+                Manufacturers = ManufacturerManager.GetAll().Select(m =>
+                    new SelectListItem {Text = m.Name, Value = m.Id.ToString()})
+            };
             return View(model);
         }
 
@@ -112,7 +107,7 @@ namespace AssetTracking.App.Controllers
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }
 
@@ -123,7 +118,7 @@ namespace AssetTracking.App.Controllers
             var employees = await employeeController.GetEmployeesAsync();
             var assets = AssetManager.GetAll();
             var employeeNumbers = assets.Select(a => a.AssignedTo);
-            var unassignedEmployees = employees.Where(e => !employeeNumbers.Any(es => es == e.EmployeeNumber)).ToList();
+            var unassignedEmployees = employees.Where(e => employeeNumbers.All(es => es != e.EmployeeNumber)).ToList();
             var model = new AssetAssignViewModel();
             model.Employees = unassignedEmployees.Select(t =>
                 new SelectListItem
@@ -173,64 +168,25 @@ namespace AssetTracking.App.Controllers
             {
                 foreach (var id in Assign.AssetIds)
                 {
-                    var asset = AssetManager.Find(id);
-                    asset.AssignedTo = Assign.EmployeeNumber;
-                    AssetManager.Assign(asset);
+                    if (id != 0)
+                    {
+                        var asset = AssetManager.Find(id);
+                        asset.AssignedTo = Assign.EmployeeNumber;
+                        AssetManager.Assign(asset);
+                    }
                 }            
                
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
-            }
-        }
-        
-
-        // GET: Asset/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Asset/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
+                return View("Error");
             }
         }
 
-        // GET: Asset/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Error()
         {
-            return View();
-        }
-
-        // POST: Asset/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
 
