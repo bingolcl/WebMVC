@@ -16,11 +16,13 @@ namespace AssetTracking.App.Models
         public string Description { get; set; }
         [DisplayName("Asset Type Name")]
         public string Type { get; set; }
+        public int TypeId { get; set; }
         [DisplayName("Asset Tag Number")]
         public string TagNumber { get; set; }
         [DisplayName("Serial Number")]
         public string SerialNumber { get; set; }        
         public Employee Employee { get; set; }
+
         [DisplayName("Employee Name")]
         public string AssignTo
         {

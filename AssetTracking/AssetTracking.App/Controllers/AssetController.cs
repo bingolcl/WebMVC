@@ -144,13 +144,19 @@ namespace AssetTracking.App.Controllers
                     Text = a.Description,
                     Value = a.Id.ToString()
                 });
-            model.MobilePhones = assets.Where(a => a.AssetType.Id == 4 && a.AssignedTo == null).Select(a =>
+            model.Monitors = assets.Where(a => a.AssetType.Id == 4 && a.AssignedTo == null).Select(a =>
                 new SelectListItem
                 {
                     Text = a.Description,
                     Value = a.Id.ToString()
                 });
-            model.DeskPhones = assets.Where(a => a.AssetType.Id == 5 && a.AssignedTo == null).Select(a =>
+            model.MobilePhones = assets.Where(a => a.AssetType.Id == 5 && a.AssignedTo == null).Select(a =>
+                new SelectListItem
+                {
+                    Text = a.Description,
+                    Value = a.Id.ToString()
+                });
+            model.DeskPhones = assets.Where(a => a.AssetType.Id == 6 && a.AssignedTo == null).Select(a =>
                 new SelectListItem
                 {
                     Text = a.Description,

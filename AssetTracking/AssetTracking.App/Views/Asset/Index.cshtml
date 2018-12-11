@@ -13,6 +13,7 @@
 
 <br />
 <h2>Assets</h2>
+
 <div class="row" style="padding-top: 15px;">
     <div class="col-md-4">
         <label>Assignment: </label>
@@ -43,6 +44,7 @@
 </div>
 
 <div style="text-align: right;">
+    <button class="btn btn-default" onclick="reset()" style="margin-right: 10px;">Reset Filter</button>
     <a class="btn btn-success" asp-action="Create" style="margin-right: 10px;">New Asset</a>
     <a class="btn btn-primary" asp-action="Assign">Assignment</a>
 </div>
@@ -50,6 +52,12 @@
 @section Scripts {
     <script>
         var assign = -1, type = -1, employee = -1;
+        function reset() {
+            $('#uxAssigns').val(-1).trigger("chosen:updated");
+            $('#uxTypes').val(-1).trigger("chosen:updated");
+            $('#uxEmployees').val(-1).trigger("chosen:updated");
+            populateTable();
+        }
 
         function populateEmployees() {
             var dropDown = $('#uxEmployees');
@@ -71,6 +79,12 @@
             assign = $('#uxAssigns').val();
             type = $("#uxTypes").val();
             employee = $('#uxEmployees').val();
+
+            $('#uxEmployees').prop('disabled', false);
+            if (assign == 0) {
+                employee = -1;
+                $('#uxEmployees').prop('disabled', true);
+            }
 
             $.ajax({
                 method: 'POST',
