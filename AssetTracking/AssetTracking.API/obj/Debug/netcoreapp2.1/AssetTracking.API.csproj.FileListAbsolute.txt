@@ -45,7 +45,6 @@ C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netc
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.runtimeconfig.dev.json
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.dll
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.pdb
-C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.csprojAssemblyReference.cache
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.csproj.CoreCompileInputs.cache
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cache
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cs

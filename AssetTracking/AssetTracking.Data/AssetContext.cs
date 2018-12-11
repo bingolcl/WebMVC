@@ -16,14 +16,14 @@ namespace AssetTracking.Data
         public AssetContext(DbContextOptions<AssetContext> options)
    : base(options)
         { }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    //Change the connection string here for your home computer/lab computer
-        //    optionsBuilder.UseSqlServer(@"Server=localhost;Database=Asset;user id=sa;password=SQLPassword;");
-        //    //optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Domain;Trusted_Connection=True;");
-        //    //optionsBuilder.UseSqlServer(@"Data Source=BINGOLCL\\SQLEXPRESS;Initial Catalog=Domain;Trusted_Connection=True;");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //Change the connection string here for your home computer/lab computer
+            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=Asset;user id=sa;password=SQLPassword;");
+            optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Asset;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer(@"Data Source=BINGOLCL\\SQLEXPRESS;Initial Catalog=Domain;Trusted_Connection=True;");
 
-        //}
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -219,7 +219,125 @@ namespace AssetTracking.Data
                     Description = "HR laptop",
                     AssignedTo = "SM1003",
                     SerialNumber = "X85981-254"
+                },
+                new Asset
+                {
+                    Id = 4,
+                    TagNumber = "H591",
+                    AssetTypeId = 1,
+                    ModelId = 1,
+                    Description = "Office3 Computer",
+                    SerialNumber = "X821908-251"
+                },
+                new Asset
+                {
+                    Id = 5,
+                    TagNumber = "H653",
+                    AssetTypeId = 1,
+                    ModelId = 3,
+                    Description = "Office4 Computer",
+                    SerialNumber = "X821908-956"
+                },
+                new Asset
+                {
+                    Id = 6,
+                    TagNumber = "P964",
+                    AssetTypeId = 2,
+                    ModelId = 5,
+                    Description = "Office Laptop",
+                    SerialNumber = "X821908-474"
+                },
+                new Asset
+                {
+                    Id = 7,
+                    TagNumber = "L625",
+                    AssetTypeId = 2,
+                    ModelId = 8,
+                    Description = "Office2 Laptop",
+                    SerialNumber = "X821908-685"
+                },
+                new Asset
+                {
+                    Id = 8,
+                    TagNumber = "L532",
+                    AssetTypeId = 3,
+                    ModelId = 9,
+                    Description = "Office iPad",
+                    SerialNumber = "X821908-748"
+                },
+                new Asset
+                {
+                    Id = 9,
+                    TagNumber = "L856",
+                    AssetTypeId = 3,
+                    ModelId = 11,
+                    Description = "Office2 Tab",
+                    SerialNumber = "X821908-3854"
+                },
+                new Asset
+                {
+                    Id = 10,
+                    TagNumber = "H815",
+                    AssetTypeId = 3,
+                    ModelId = 9,
+                    Description = "Office3 iPad",
+                    SerialNumber = "X821908-847"
+                },
+                new Asset
+                {
+                    Id = 11,
+                    TagNumber = "W351",
+                    AssetTypeId = 4,
+                    ModelId = 12,
+                    Description = "Office Monitor",
+                    SerialNumber = "X821908-084"
+                },
+                new Asset
+                {
+                    Id = 12,
+                    TagNumber = "K578",
+                    AssetTypeId = 4,
+                    ModelId = 14,
+                    Description = "Office2 Monitor",
+                    SerialNumber = "X821908-471"
+                },
+                new Asset
+                {
+                    Id = 13,
+                    TagNumber = "M547",
+                    AssetTypeId = 5,
+                    ModelId = 16,
+                    Description = "iPhone 5",
+                    SerialNumber = "X821908-842"
+                },
+                new Asset
+                {
+                    Id = 14,
+                    TagNumber = "F573",
+                    AssetTypeId = 5,
+                    ModelId = 17,
+                    Description = "iPhone 6",
+                    SerialNumber = "X821908-425"
+                },
+                new Asset
+                {
+                    Id = 15,
+                    TagNumber = "Q352",
+                    AssetTypeId = 6,
+                    ModelId = 21,
+                    Description = "Office Phone",
+                    SerialNumber = "X821908-658"
+                },
+                new Asset
+                {
+                    Id = 16,
+                    TagNumber = "Q245",
+                    AssetTypeId = 6,
+                    ModelId = 22,
+                    Description = "Office2 Phone",
+                    SerialNumber = "X821908-415"
                 });
+
         }
     }
 }
