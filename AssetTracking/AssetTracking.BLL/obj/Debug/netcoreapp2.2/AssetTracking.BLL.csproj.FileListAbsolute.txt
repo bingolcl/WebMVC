@@ -1,0 +1,14 @@
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.BLL.deps.json
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.BLL.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.BLL.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.Data.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.Domain.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.Data.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\bin\Debug\netcoreapp2.2\AssetTracking.Domain.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.csprojAssemblyReference.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.AssemblyInfoInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.AssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.csproj.CopyComplete
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.BLL\obj\Debug\netcoreapp2.2\AssetTracking.BLL.pdb

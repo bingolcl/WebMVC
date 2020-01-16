@@ -14,7 +14,7 @@ namespace AssetTracking.Data
 
             var builder = new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<AssetContext>();
 
-            var connectionString = @"Data Source=SERVER03;Initial Catalog=Asset;Trusted_Connection=True;";
+            var connectionString = @"Data Source=SQLAPP;Initial Catalog=Asset;Trusted_Connection=True;";
 
             builder.UseSqlServer(connectionString);
 

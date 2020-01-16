@@ -1,0 +1,8 @@
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.2\AssetTracking.Domain.deps.json
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.2\AssetTracking.Domain.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\bin\Debug\netcoreapp2.2\AssetTracking.Domain.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.2\AssetTracking.Domain.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.2\AssetTracking.Domain.AssemblyInfoInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.2\AssetTracking.Domain.AssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.2\AssetTracking.Domain.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.Domain\obj\Debug\netcoreapp2.2\AssetTracking.Domain.pdb

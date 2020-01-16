@@ -53,3 +53,16 @@ C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netc
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorTargetAssemblyInfo.cache
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.dll
 C:\Users\cecilia\Documents\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.deps.json
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.runtimeconfig.json
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.runtimeconfig.dev.json
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\bin\Debug\netcoreapp2.1\AssetTracking.API.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorAssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.AssemblyInfoInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.AssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.RazorTargetAssemblyInfo.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.1\AssetTracking.API.pdb
