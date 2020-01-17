@@ -11,3 +11,4 @@ C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debu
 C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.2\AssetTracking.API.RazorTargetAssemblyInfo.cache
 C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.2\AssetTracking.API.dll
 C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.2\AssetTracking.API.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\AssetTracking.API\obj\Debug\netcoreapp2.2\AssetTracking.API.csprojAssemblyReference.cache

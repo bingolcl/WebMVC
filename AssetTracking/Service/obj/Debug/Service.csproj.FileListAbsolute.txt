@@ -42,3 +42,7 @@ C:\Users\czhang\Documents\GitHub\smallprojectplanning\Service\obj\Debug\Service.
 C:\Users\czhang\Documents\GitHub\smallprojectplanning\Service\obj\Debug\Service.csproj.CopyComplete
 C:\Users\czhang\Documents\GitHub\smallprojectplanning\Service\obj\Debug\Service.dll
 C:\Users\czhang\Documents\GitHub\smallprojectplanning\Service\obj\Debug\Service.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\Service\obj\Debug\Service.csprojAssemblyReference.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\Service\obj\Debug\Service.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\AssetTracking\Service\obj\Debug\Service.pdb

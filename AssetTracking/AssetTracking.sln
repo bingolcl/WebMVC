@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.BLL", "AssetT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.App", "AssetTracking.App\AssetTracking.App.csproj", "{27FE67D1-D039-4866-8238-A7AEC8F2DEB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetTracking.API", "AssetTracking.API\AssetTracking.API.csproj", "{09597386-E3D8-44C5-95AC-4F0ED843B74B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetTracking.API", "AssetTracking.API\AssetTracking.API.csproj", "{09597386-E3D8-44C5-95AC-4F0ED843B74B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
