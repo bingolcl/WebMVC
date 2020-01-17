@@ -20,7 +20,7 @@ namespace AssetTracking.Data
         {
             //Change the connection string here for your home computer/lab computer
             //optionsBuilder.UseSqlServer(@"Server=localhost;Database=Asset;user id=sa;password=SQLPassword;");
-            optionsBuilder.UseSqlServer(@"Data Source=SERVER03;Initial Catalog=Asset;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=SQLAPP;Initial Catalog=Asset;Trusted_Connection=True;");
             //optionsBuilder.UseSqlServer(@"Data Source=BINGOLCL\\SQLEXPRESS;Initial Catalog=Domain;Trusted_Connection=True;");
 
         }
