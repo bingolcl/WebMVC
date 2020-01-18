@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckListActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/scrollable">
+
+        <LinearLayout
+            android:id="@+id/ll_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:layout_centerInParent="true">
+
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:text="Do you understand the scope of work?"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:text="Do you have an evacuation plan?"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:text="Do you have all necessary PPE, and has it been pre-use inspected?"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:text="High Vis Vest"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:text="Gloves(Nitrile/Leather)"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:text="Hearing Protection"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:text="Safety Footwear"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:text="Safety Eyewear"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_quest"
+                android:text="STOP &amp; THINK"
+                android:textSize="26sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:text="Lockout/Tagout required?"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:onClick="onCheckboxClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckedTextView
+                android:id="@+id/txt_lockout"
+                android:text="&#10003; Proper Shutdown.\n&#10003; Apply locks and tags\n&#10003; Verify proper isolation."
+                android:textSize="18sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:text="Energized Work Required?"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:onClick="onCheckboxClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckedTextView
+                android:id="@+id/txt_energized"
+                android:text="&#10003; Complete EEJRA.\n&#10003; Create Arc Flash boundary\n&#10003; Proper PPE Pre-use inspections."
+                android:textSize="18sp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20sp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="top"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="20sp"
+                android:inputType="textCapSentences"
+                android:hint="Notes"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="openSumActivity"
+                android:text="Confirm"/>
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clearList"
+                android:layout_marginBottom="30sp"
+                android:text="Clear All" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
