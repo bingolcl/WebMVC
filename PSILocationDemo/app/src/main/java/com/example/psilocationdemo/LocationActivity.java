@@ -4,12 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -18,12 +25,14 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.provider.Telephony;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Magnifier;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -31,6 +40,15 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -45,6 +63,10 @@ public class LocationActivity extends AppCompatActivity {
     FusedLocationProviderClient mFusedLocationClient;
     LocationRequest mLocationRequest;
 
+    GoogleMap map;
+    SupportMapFragment mapFragment;
+    SearchView searchView;
+
     TextView txt_location;
     TextView txt_address;
     Button btn_update;
@@ -52,20 +74,25 @@ public class LocationActivity extends AppCompatActivity {
 
     String email;
     String address;
+    Location gpsLocation;
+    double longitude=49.0982;
+    double latitude=-122.7093;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
+
+
         //Get passing value
         Intent intent = getIntent();
         email = intent.getStringExtra("EMAIL");
 
         //Init View
-        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("PSI Location");
+        // Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setTitle("PSI Location");
         txt_location = (TextView) findViewById(R.id.txt_location);
         txt_address = (TextView) findViewById(R.id.txt_address);
         btn_update = (Button)findViewById(R.id.btn_update);
@@ -74,6 +101,11 @@ public class LocationActivity extends AppCompatActivity {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         getLocation();
+
+        // Init map fragment
+        searchView = (SearchView) findViewById(R.id.sv_location);
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
+        setSearchQuery();
 
         //Set event for button
         btn_update.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +153,39 @@ public class LocationActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void setSearchQuery(){
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                String location = searchView.getQuery().toString();
+                List<Address> addressList = null;
+
+                if(location != null || !location.equals("")){
+                    Geocoder geocoder = new Geocoder(LocationActivity.this);
+                    try {
+                        addressList = geocoder.getFromLocationName(location,1);
+                        Address queryAddress = addressList.get(0);
+                        Location queryLocation = new Location("");
+                        queryLocation.setLatitude(queryAddress.getLatitude());//your coords of course
+                        queryLocation.setLongitude(queryAddress.getLongitude());
+                        setLocation(queryLocation);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), "search not found", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Please enter a value.", Toast.LENGTH_LONG).show();
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+    }
+
     @SuppressLint("MissingPermission")
     private void getLocation(){
         if (checkPermissions()) {
@@ -131,7 +196,7 @@ public class LocationActivity extends AppCompatActivity {
                         new OnCompleteListener<Location>() {
                             @Override
                             public void onComplete(@NonNull Task<Location> task) {
-                                Location location = task.getResult();
+                                final Location location = task.getResult();
                                 if (location == null) {
                                     requestNewLocationData();
                                 } else {
@@ -149,7 +214,6 @@ public class LocationActivity extends AppCompatActivity {
             requestPermissions();
         }
     }
-
 
     @SuppressLint("MissingPermission")
     private void requestNewLocationData() {
@@ -205,8 +269,8 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     private void setLocation(Location location){
-        double longitude = location.getLongitude();
-        double latitude = location.getLatitude();
+        longitude = location.getLongitude();
+        latitude = location.getLatitude();
 
         try{
             Geocoder geocoder = new Geocoder(LocationActivity.this, Locale.getDefault() );
@@ -218,7 +282,21 @@ public class LocationActivity extends AppCompatActivity {
                     +String.valueOf(longitude));
             txt_address.setText("Address: " + addressList.get(0).getAddressLine(0));
 
+            gpsLocation = location;
             address = txt_location.getText().toString()+'\n'+txt_address.getText().toString();
+
+            mapFragment.getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap mMap) {
+                    map = mMap;
+                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+                    mMap.clear(); //clear old markers
+                    LatLng latLng = new LatLng(latitude,longitude);
+                    mMap.addMarker(new MarkerOptions().position(latLng).title(txt_location.getText().toString()).snippet(txt_address.getText().toString()));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
+                }
+            });
 
         }catch (IOException e){
             e.printStackTrace();

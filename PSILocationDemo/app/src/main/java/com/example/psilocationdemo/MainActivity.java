@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         //final String url = "http://10.0.2.2:5000/api/Account/Login?email=czhang@escautomation.com&password=11312431Ci";
-        String url = "http://10.0.2.2:5000/api/Account/Login?";
+        String url = "http://192.168.50.20:8093/api/Account/Login?";
         userEmail = email.getText().toString().trim();
         String pass = password.getText().toString().trim();
         url += "email="+ userEmail+"&password="+ pass;

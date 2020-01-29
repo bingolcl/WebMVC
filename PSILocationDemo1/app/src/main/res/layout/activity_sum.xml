@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SumActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/txt_title"
+            android:text="PSI Summary"
+            android:textSize="26sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:text="Email"
+            android:textSize="12sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:text="Address"
+            android:textSize="12sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_list"
+            android:text="List"
+            android:textSize="12sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="submitPSI"
+            android:text="Submit"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

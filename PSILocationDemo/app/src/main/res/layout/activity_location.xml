@@ -22,9 +22,31 @@
             android:text="Your Location:"
             android:textSize="30sp"
             android:layout_gravity="top"
-            android:layout_marginBottom="80sp"
+            android:layout_marginBottom="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:id="@+id/sv_location"
+            android:queryHint="Search..."
+            android:iconifiedByDefault="false"
+            android:layout_marginBottom="10sp"
+            android:elevation="5dp"
+            android:background="@drawable/bg_round">
+        </SearchView>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/map"
+            tools:context=".LocationActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
 
         <TextView
             android:id="@+id/txt_location"
@@ -38,7 +60,7 @@
             android:text="Address: loading..."
             android:textSize="14sp"
             android:layout_gravity="left"
-            android:layout_marginBottom="30sp"
+            android:layout_marginBottom="10sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
