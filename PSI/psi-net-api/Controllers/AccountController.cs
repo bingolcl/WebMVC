@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using psi_net_api.Models;
-using psi_net_api.Services.interfaces;
+using PSI.Data;
+using PSI.Service.interfaces;
 
 namespace psi_net_api.Controllers
 {
@@ -15,13 +15,13 @@ namespace psi_net_api.Controllers
     public class AccountController : ControllerBase
     {
         IActiveDirectoryService _activeDirectoryService { get; set; }
-        IUserManager _userManager { get; set; }
+        IUserService _userService { get; set; }
 
         public AccountController(IActiveDirectoryService activeDirectoryService,
-                                 IUserManager userManager)
+                                 IUserService userService)
         {
             _activeDirectoryService = activeDirectoryService;
-            _userManager = userManager;
+            _userService = userService;
         }
 
         [HttpPost]
@@ -40,7 +40,7 @@ namespace psi_net_api.Controllers
         [Route("GetPSIUsers")]
         public IEnumerable<User> GetPSIUsers()
         {
-            var users = _userManager.GetAll();
+            var users = _userService.GetAll();
             return users;
         }
 
@@ -48,8 +48,8 @@ namespace psi_net_api.Controllers
         [Route("GetUserRoles")]
         public IEnumerable<Role> GetUserRoles(string email)
         {
-            var user = _userManager.Find(email);
-            var roles = _userManager.GetRoles(user);
+            var user = _userService.Find(email);
+            var roles = _userService.GetRoles(user);
             return roles;
         }
 

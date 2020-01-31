@@ -1,0 +1,11 @@
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\bin\Debug\netcoreapp2.2\PSI.Data.deps.json
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\bin\Debug\netcoreapp2.2\PSI.Data.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.csprojAssemblyReference.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.AssemblyInfoInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.AssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\bin\Debug\netcoreapp2.2\PSI.Data.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\obj\Debug\netcoreapp2.2\PSI.Data.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\bin\Debug\netcoreapp2.2\PSI.Data.runtimeconfig.json
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Data\bin\Debug\netcoreapp2.2\PSI.Data.runtimeconfig.dev.json

@@ -4,7 +4,6 @@ C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\bin\Release\netcoreapp2.
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\bin\Release\netcoreapp2.2\psi-net-api.dll
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\bin\Release\netcoreapp2.2\psi-net-api.pdb
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\bin\Release\netcoreapp2.2\psi-net-api.xml
-C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\obj\Release\netcoreapp2.2\psi-net-api.csprojAssemblyReference.cache
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\obj\Release\netcoreapp2.2\psi-net-api.csproj.CoreCompileInputs.cache
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\obj\Release\netcoreapp2.2\psi-net-api.RazorAssemblyInfo.cache
 C:\Users\czhang\Documents\GitHub\WebMVC\PSI\psi-net-api\obj\Release\netcoreapp2.2\psi-net-api.RazorAssemblyInfo.cs

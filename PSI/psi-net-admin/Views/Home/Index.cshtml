@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="row" style="padding-top: 15px;">
+    <div class="col-md-12">
+        <label>Technicians: </label>
+        <select id="uxTechnicians" class="form-control">
+            <option value="-1">All</option>
+        </select>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+       
+        function populateTechs() {
+            var dropDown = $('#uxTechnicians');
+            $.ajax({
+                method: 'GET',
+                url: 'https://localhost:44307/api/technician/GetPSITechs'
+            }).done(function (data, statusText, xhdr) {
+                $.each(data,
+                    function (index, tech) {
+                        var option = new Option(tech.firstName + ' ' + tech.lastName, tech.id);
+                        dropDown.append(option);
+                    });
+            }).fail(function (xhdr, statusText, errorText) {
+                dropDown.options[dropDown.length] = new Option("Error", 0);
+            });
+        }
+
+        //user jquery's ajax method to call a view component to display
+        $(document).ready(function () {
+            populateTechs();
+        });
+    </script>
+}

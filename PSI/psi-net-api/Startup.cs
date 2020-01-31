@@ -10,11 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using psi_net_api.Services;
-using psi_net_api.Services.interfaces;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
+using PSI.Service.interfaces;
+using PSI.Service;
 
 namespace psi_net_api
 {
@@ -38,7 +38,7 @@ namespace psi_net_api
                     builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
             services.AddScoped<IActiveDirectoryService, ActiveDirectoryService>();
-            var connString = Configuration.GetConnectionString("HRConnection");
+            var connString = Configuration.GetConnectionString("PSIConnection");
             services.AddManagerServices(Configuration);
 
             // Register the Swagger generator, defining 1 or more Swagger documents

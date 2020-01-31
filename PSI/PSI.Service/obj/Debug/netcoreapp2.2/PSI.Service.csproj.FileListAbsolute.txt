@@ -1,0 +1,12 @@
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\bin\Debug\netcoreapp2.2\PSI.Service.deps.json
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\bin\Debug\netcoreapp2.2\PSI.Service.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.csproj.CoreCompileInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.AssemblyInfoInputs.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.AssemblyInfo.cs
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\bin\Debug\netcoreapp2.2\PSI.Data.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\bin\Debug\netcoreapp2.2\PSI.Data.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.csprojAssemblyReference.cache
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.csproj.CopyComplete
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\bin\Debug\netcoreapp2.2\PSI.Service.pdb
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.dll
+C:\Users\czhang\Documents\GitHub\WebMVC\PSI\PSI.Service\obj\Debug\netcoreapp2.2\PSI.Service.pdb
