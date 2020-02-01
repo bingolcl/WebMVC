@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Init View
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         email = (EditText) findViewById(R.id.txt_email);
         password = (EditText) findViewById(R.id.txt_password);
         api_test = (TextView) findViewById(R.id.api_test);
@@ -70,15 +68,16 @@ public class MainActivity extends AppCompatActivity {
             email.setError("Email is required!");
         } else {
             userLogin(this);
+            //openVacationActivity();
         }
     }
 
-    public void openLocationActivity() {
+    public void openVacationActivity() {
         if (!validateInput()) {
             email.setError("Email is required!");
         } else {
             userEmail = email.getText().toString().trim();
-            Intent intent = new Intent(this, LocationActivity.class);
+            Intent intent = new Intent(this, VacationActivity.class);
             intent.putExtra("EMAIL", userEmail);
             startActivity(intent);
         }
@@ -131,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     String message = response.getString("message");
                     success = response.getBoolean("success");
                     Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
-                    if(success) openLocationActivity();
+                    if(success) openVacationActivity();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();

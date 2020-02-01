@@ -26,27 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:id="@+id/sv_location"
-            android:queryHint="Search..."
-            android:iconifiedByDefault="false"
-            android:layout_marginBottom="10sp"
-            android:elevation="5dp"
-            android:background="@drawable/bg_round">
-        </SearchView>
-
-        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:layout_gravity="top"
-            android:layout_marginBottom="20sp"
-            android:id="@+id/map"
-            tools:context=".LocationActivity"
-            android:name="com.google.android.gms.maps.SupportMapFragment" />
 
         <TextView
             android:id="@+id/txt_location"
@@ -64,6 +43,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:text="Update Current Location"/>
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:id="@+id/sv_location"
+            android:queryHint="Or manually enter a location here..."
+            android:iconifiedByDefault="false"
+            android:layout_marginBottom="10sp"
+            android:elevation="5dp"
+            android:background="@drawable/bg_round">
+        </SearchView>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="10sp"
+            android:id="@+id/map"
+            tools:context=".LocationActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
         <Button
             android:id="@+id/btn_confirm"
             style="@style/Widget.AppCompat.Button.Colored"
@@ -71,14 +81,6 @@
             android:layout_height="wrap_content"
             android:onClick="openFormActivity"
             android:text="Confirm" />
-
-        <Button
-            android:id="@+id/btn_update"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update"/>
-
 
     </LinearLayout>
 </RelativeLayout>

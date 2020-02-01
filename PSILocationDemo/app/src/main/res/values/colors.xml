@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2F2FA2</color>
-    <color name="colorPrimaryDark">#242582</color>
+    <color name="colorPrimary">#233ED8</color>
+    <color name="colorPrimaryDark">#2F2FA2</color>
     <color name="colorAccent">#F64C72</color>
     <color name="colorDarkAccent">#553d67</color>
     <color name="colorGrayAccent">#99738e</color>
     <color name="colorWhite">#ffffff</color>
+
+    <color name="calendar_header">@color/colorAccent</color>
+    <color name="calendar_header_title">#FFF</color>
+    <color name="selected_date_circle_color_app">#FF5252</color>
+    <color name="range_bg_color_app">#FFCDD2</color>
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:custom="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".VacationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_centerInParent="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="30sp"
+            custom:cardCornerRadius="8dp">
+
+            <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:calendar_tag="Test"
+                custom:disable_date_color="#ABABAB"
+                custom:header_bg="@drawable/calendar_header"
+                custom:range_color="@color/range_bg_color_app"
+                custom:selected_date_circle_color="@color/selected_date_circle_color_app"
+                custom:title_color="@color/calendar_header_title"
+                custom:editable="true"
+                custom:week_offset="0">
+
+            </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="10sp"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:onClick="openLocationActivity"
+            android:text="Save"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

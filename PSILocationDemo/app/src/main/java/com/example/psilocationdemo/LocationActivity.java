@@ -35,11 +35,16 @@ import android.widget.Magnifier;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -51,11 +56,11 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.widget.AutocompleteActivity;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-
 
 public class LocationActivity extends AppCompatActivity {
 
@@ -65,6 +70,7 @@ public class LocationActivity extends AppCompatActivity {
 
     GoogleMap map;
     SupportMapFragment mapFragment;
+    LatLng latLng;
     SearchView searchView;
 
     TextView txt_location;
@@ -90,9 +96,9 @@ public class LocationActivity extends AppCompatActivity {
         email = intent.getStringExtra("EMAIL");
 
         //Init View
-        // Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setTitle("PSI Location");
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("PSI Location");
         txt_location = (TextView) findViewById(R.id.txt_location);
         txt_address = (TextView) findViewById(R.id.txt_address);
         btn_update = (Button)findViewById(R.id.btn_update);
@@ -105,6 +111,8 @@ public class LocationActivity extends AppCompatActivity {
         // Init map fragment
         searchView = (SearchView) findViewById(R.id.sv_location);
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
+        //String apiKey = getResources().getString(R.string.map_key);
+        //setupAutoCompleteFragment();
         setSearchQuery();
 
         //Set event for button
@@ -112,6 +120,8 @@ public class LocationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 refreshLocationData();
+                searchView.setQuery("", false);
+                searchView.clearFocus();
             }
         });
 
@@ -125,6 +135,7 @@ public class LocationActivity extends AppCompatActivity {
         //Toast.makeText(this, "create", Toast.LENGTH_SHORT).show();
 
     }
+
 
     public void openFormActivity(View view){
         Intent intent = new Intent(this,FormActivity.class);
@@ -153,25 +164,50 @@ public class LocationActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    private void setupAutoCompleteFragment() {
+//        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+//                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+//            @Override
+//            public void onPlaceSelected(Place place) {
+//                latLng = place.getLatLng();
+//                Location autoLocation = new Location("");
+//                autoLocation.setLatitude(latLng.latitude);//your coords of course
+//                autoLocation.setLongitude(latLng.longitude);
+//                setLocation(autoLocation);
+//            }
+//
+//            @Override
+//            public void onError(Status status) {
+//                //Log.e("Error", status.getStatusMessage());
+//                Toast.makeText(getApplicationContext(), status.getStatusMessage(), Toast.LENGTH_LONG).show();
+//            }
+//        });
+//    }
+
     private void setSearchQuery(){
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 String location = searchView.getQuery().toString();
-                List<Address> addressList = null;
+                List<Address> addressList;
 
-                if(location != null || !location.equals("")){
+                if(location != null && !location.equals("")){
                     Geocoder geocoder = new Geocoder(LocationActivity.this);
                     try {
                         addressList = geocoder.getFromLocationName(location,1);
-                        Address queryAddress = addressList.get(0);
-                        Location queryLocation = new Location("");
-                        queryLocation.setLatitude(queryAddress.getLatitude());//your coords of course
-                        queryLocation.setLongitude(queryAddress.getLongitude());
-                        setLocation(queryLocation);
+                        if(addressList != null && addressList.size()>0){
+                            Address queryAddress = addressList.get(0);
+                            Location queryLocation = new Location("");
+                            queryLocation.setLatitude(queryAddress.getLatitude());//your coords of course
+                            queryLocation.setLongitude(queryAddress.getLongitude());
+                            setLocation(queryLocation);
+                        }else{
+                            Toast.makeText(getApplicationContext(), "search not found", Toast.LENGTH_LONG).show();
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "search not found", Toast.LENGTH_LONG).show();
+
                     }
                 }else{
                     Toast.makeText(getApplicationContext(), "Please enter a value.", Toast.LENGTH_LONG).show();
@@ -215,6 +251,13 @@ public class LocationActivity extends AppCompatActivity {
         }
     }
 
+
+    private void refreshLocationData(){
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient.removeLocationUpdates(mLocationCallback);
+        requestNewLocationData();
+    }
+
     @SuppressLint("MissingPermission")
     private void requestNewLocationData() {
         mLocationRequest = new LocationRequest();
@@ -229,12 +272,6 @@ public class LocationActivity extends AppCompatActivity {
                 mLocationRequest, mLocationCallback,
                 Looper.myLooper()
         );
-    }
-
-    private void refreshLocationData(){
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        mFusedLocationClient.removeLocationUpdates(mLocationCallback);
-        requestNewLocationData();
     }
 
     private LocationCallback mLocationCallback = new LocationCallback() {
